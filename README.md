@@ -14,5 +14,5 @@
   2. [Структуры данных](https://stepik.org/course/1547/syllabus)
   
 ### Sites
-  1.[tutorialspoint](https://www.tutorialspoint.com/data_structures_algorithms/index.htm)
-  2.[BIG O](https://habr.com/ru/post/444594/)
+  1. [tutorialspoint](https://www.tutorialspoint.com/data_structures_algorithms/index.htm)
+  2. [BIG O](https://habr.com/ru/post/444594/)
