@@ -1,4 +1,4 @@
-#include "../ex02/dynamic_stack.h"
+#include "dynamic_stack.h"
 #include <iostream>
 
 int menu()
@@ -63,7 +63,6 @@ int main(void)
 	t_stack *stack = nullptr;
 	t_stack *stack2 = nullptr;
 
-//	init(&stack);
 	int op_num;
 	while (1)
 	{
@@ -72,7 +71,7 @@ int main(void)
 		{
 			case (1):
 				int op;
-				std::cout << "1 to enter randomly, 2 to enter a number" << std::endl;
+				std::cout << "1 to enter randomly, 2 to enter a number, 3 from the top of the helper stack" << std::endl;
 				std::cout << "Enter: ";
 				std::cin >> op;
 				switch(op)
@@ -88,6 +87,9 @@ int main(void)
 						int new_elem;
 						std::cin >> new_elem;
 						push(&stack, new_elem);
+						break;
+					case 3:
+						moving_tops(&stack2, &stack);
 						break;
 					default:
 						std::cout << "Try again!" << std::endl;
