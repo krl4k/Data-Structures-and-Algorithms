@@ -47,6 +47,11 @@ void pop(t_stack *stack)
 {
 	if (stack)
 	{
+		if (stack->size == 0)
+		{
+			std::cout << "Stack is empty" << std::endl;
+			return;
+		}
 		stack->array[stack->size] = 0;
 		stack->size--;
 	}
