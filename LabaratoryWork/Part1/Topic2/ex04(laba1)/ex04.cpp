@@ -51,7 +51,7 @@ int menu()
 	std::cout << "|Exit:              5|" << std::endl;
 	std::cout << "|Enter a number:  ";
 	std::cin >> str;
-	std::cout << "---------------------|" << std::endl;
+	std::cout << "|-------------------|" << std::endl;
 	if(str.length() > 1)
 		return 0;
 	const char *num = str.c_str();

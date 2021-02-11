@@ -18,13 +18,12 @@ int is_valid_input(const char *s)
 
 char *get_s_number()
 {
-//	std::cout << "Enter elem to add: ";
 	std::string s;
 	std::cin >> s;
 	const char *num = s.c_str();
-	if (is_valid_input(num))
+	if(is_valid_input(num))
 	{
-		return (char *)num;
+		return (char *) num;
 	}
 	else
 		return nullptr;
@@ -48,7 +47,7 @@ int menu()
 	std::cout << "|Exit:              6|" << std::endl;
 	std::cout << "|Enter a number:  ";
 	std::cin >> str;
-	std::cout << "----------------------|" << std::endl;
+	std::cout << "|--------------------|" << std::endl;
 
 	if(str.length() > 1)
 		return 0;
@@ -76,17 +75,13 @@ int main(void)
 		{
 			case (1):
 				std::cout << "Enter elem to add: ";
-				if (!(num = get_s_number()))
+				if(!(num = get_s_number()))
 				{
 					std::cout << "Bad input" << std::endl;
 					break;
 				}
-				else
-				{
-					n = get_int_number(num);
-//					printf("n = %d\n", n);
-					push(queue, n);
-				}
+				n = get_int_number(num);
+				push(queue, n);
 				break;
 			case 2:
 				pop(queue);
