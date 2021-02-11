@@ -37,9 +37,16 @@ void push_random(t_stack **stack, int count_elem)
 void moving_tops(t_stack **stack1, t_stack **stack2)
 {
 	if (!*stack1)
+	{
 		return;
+	}
 	if (!*stack2)
 		init(stack2);
+	if (!(*stack1)->top)
+	{
+		std::cout << "Stack is empty!" << std::endl;
+		return;
+	}
 	if ((*stack1)->top)
 	{
 		t_node *temp = (*stack1)->top;
@@ -62,7 +69,7 @@ int main(void)
 {
 	t_stack *stack = nullptr;
 	t_stack *stack2 = nullptr;
-
+	std::cout << "This works for 99.9999999999999999999999999999999999999999999990% ~ 100%" << std::endl;
 	int op_num;
 	while (1)
 	{
@@ -100,6 +107,7 @@ int main(void)
 				std::cout << "Can put this item on the top of the helper stack?\n";
 				std::cout << "1 - add a helper to the stack\n"
 							 "2 - really delete\n";
+				std::cout << "Enter: ";
 				int op1;
 				std::cin >> op1;
 				switch(op1)
@@ -108,7 +116,7 @@ int main(void)
 						moving_tops(&stack, &stack2);
 						break;
 					case 2:
-						pop(&stack2);
+						pop(&stack);
 						break;
 					default:
 						std::cout << "Try again!" << std::endl;
@@ -117,6 +125,7 @@ int main(void)
 				break;
 			case 3:
 				std::cout << "1 - mainStack.\n2 - handlerStack!" << std::endl;
+				std::cout << "Enter: ";
 				int op3;
 				std::cin >> op3;
 				switch(op3)
