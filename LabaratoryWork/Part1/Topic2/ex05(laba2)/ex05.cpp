@@ -18,7 +18,7 @@ int is_valid_input(const char *s)
 
 char *get_s_number()
 {
-	std::cout << "Enter elem to add: ";
+//	std::cout << "Enter elem to add: ";
 	std::string s;
 	std::cin >> s;
 	const char *num = s.c_str();
@@ -75,6 +75,7 @@ int main(void)
 		switch (op_num)
 		{
 			case (1):
+				std::cout << "Enter elem to add: ";
 				if (!(num = get_s_number()))
 				{
 					std::cout << "Bad input" << std::endl;
@@ -83,7 +84,7 @@ int main(void)
 				else
 				{
 					n = get_int_number(num);
-					printf("n = %d\n", n);
+//					printf("n = %d\n", n);
 					push(queue, n);
 				}
 				break;
