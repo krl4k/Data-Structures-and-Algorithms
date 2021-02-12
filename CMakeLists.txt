@@ -16,7 +16,10 @@ set(CMAKE_C_STANDARD 99)
 
 include_directories(LabaratoryWork/)
 link_directories(LabaratoryWork/)
-add_executable(laba2
+#add_executable(laba2
 #        LabaratoryWork/Part1/Topic2/ex05(laba2)/
 
-        )
+#        )
+
+add_executable(laba3
+        LabaratoryWork/Part1/Topic2/ex06/dynamic_queue.cpp)
