@@ -1,8 +1,8 @@
 #include "dynamic_queue.h"
-
+#include <queue>
 bool isEmpty(t_queue *queue) {
-	//	if(!queue->front)
-	//		return true;
+	if (!queue)
+		return false;
 	if(queue->size == 0)
 		return true;
 	return false;
@@ -17,16 +17,9 @@ int size(t_queue *queue) {
 void init(t_queue* &queue) {
 	queue = new t_queue;
 	(queue)->front = new t_node;
-//	(queue)->front->data = da;
-//	(queue)->front->next = nullptr;
 	(queue)->end = (queue)->front;
 	(queue)->size = 0;
-	/*(*queue)->front = new t_list;
-	(*queue)->front->data = data;
-	(*queue)->front->next = nullptr;
-	(*queue)->end = (*queue)->front;
-	(*queue)->size = 1;
-*/}
+}
 
 void deleteQueue(t_queue *&queue) {
 	if(!queue)
@@ -49,8 +42,11 @@ t_node *createElem(int data) {
 }
 
 void printQueue(t_queue *queue) {
-	if(!queue)
+	if(isEmpty(queue))
+	{
+		std::cout << "Queue is empty!" << std::endl;
 		return;
+	}
 	if(!isEmpty(queue)) {
 		t_node *tmp = queue->front;
 		std::cout << "Queue(first is front) = ";
@@ -62,7 +58,7 @@ void printQueue(t_queue *queue) {
 	}
 }
 
-void push(t_queue *&queue, int data) {
+void push(t_queue *&queue, char data) {
 	if(!(queue)) {
 		init(queue);
 //		std::cout << "Something went wrong, data = " << data << " not added!!!" << '\n';
@@ -100,29 +96,60 @@ void pop(t_queue *&queue) {
 	}
 }
 
-int back(t_queue *queue) {
+char back(t_queue *queue) {
 	if(queue && size(queue) >= 0)
 		return queue->end->data;
-	std::cout << "back elem not found. Size of queue = 0!" << std::endl;
+//	std::cout << "back elem not found. Size of queue = 0!" << std::endl;
 	return 0;
 };
 
-int front(t_queue *queue) {
+char front(t_queue *queue) {
 	if(queue && size(queue) > 0)
 		return queue->front->data;
 	std::cout << "front elem not found. Size of queue = 0!" << std::endl;
 	return 0;
 };
 
-//\todo normal init and push operation!
-
-int main()
-{
-	t_queue *queue = nullptr;
-	for (int i = 0; i < 5; i++)
-	{
-		push(queue, i);
-	}
-	printQueue(queue);
-}
+//int main()
+//{
+//	t_queue *queue = nullptr;
+//	init(queue);
+//	for (int i = 0; i < 5; i++)
+//	{
+//		push(queue, (char) ('a' + i));
+//	}
+//	pop(queue);
+//	pop(queue);
+//	pop(queue);
+//	pop(queue);
+//	pop(queue);
+//	pop(queue);
+//	push(queue, 'w');
+//	pop(queue);
+//	pop(queue);
+//	pop(queue);
+//	pop(queue);
+//	pop(queue);
+//	pop(queue);
+//	pop(queue);
+//	pop(queue);
+//	printQueue(queue);
+//
+//	std::cout << "back = " << back(queue) << std::endl;
+//	deleteQueue(queue);
+//
+//}
+/*
+ * original
+ */
+	//	std::queue<int> queue;
+//	queue.push(1);
+//	queue.push(2);
+//	queue.push(3);
+//	queue.pop();
+//	queue.pop();
+//	queue.pop();
+//	queue.push(123);
+//	std::cout << queue.back() << std::endl;
+//}
 

@@ -111,13 +111,13 @@ void deleteQueue(t_queue **queue)
 //		push(queue, i);
 //	}
 //	pop(queue);
-////	pop(queue);
+	pop(queue);
 //	if (isFull(queue))
 //		std::cout << "stack is full!" << std::endl;
 //	else
 //		std::cout << "stack not full!" << std::endl;
 //	printQueue(queue);
-////	if (queue)
+//	if (queue)
 ////		printf("qq[%d] = %d\n",3 , queue->queue[3]);
 ////	else
 ////		printf("queue null!\n");
