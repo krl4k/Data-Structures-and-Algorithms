@@ -114,6 +114,7 @@ int front(t_queue *queue) {
 	return 0;
 };
 
+//\todo normal init and push operation!
 
 int main()
 {
