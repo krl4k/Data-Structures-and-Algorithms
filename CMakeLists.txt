@@ -25,12 +25,14 @@ link_directories(
 
 #include_directories(LabaratoryWork/)
 #link_directories(LabaratoryWork/)
+#LABA2
 #add_executable(laba2
 #        LabaratoryWork/Part1/Topic2/ex05(laba2)/
 
 #        )
 
-add_executable(laba3
-        LabaratoryWork/Part1/Topic2/ex06/dynamic_queue.cpp
-        LabaratoryWork/Part1/Topic2/ex07(laba3)/ex07.cpp
-        )
+#LABA 3
+#add_executable(laba3
+#        LabaratoryWork/Part1/Topic2/ex06/dynamic_queue.cpp LabaratoryWork/Part1/Topic2/ex07\(laba3\)/ex07.cpp
+#        )
+

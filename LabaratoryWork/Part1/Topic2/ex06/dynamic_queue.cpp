@@ -43,12 +43,13 @@ t_node *createElem(int data) {
 
 void printQueue(t_queue *queue) {
 	std::cout << "------------Queue info-----------------" << std::endl;
-	if(isEmpty(queue))
+	if(!queue || isEmpty(queue))
 	{
 		std::cout << "Queue is empty!" << std::endl;
 		return;
 	}
-	if(!isEmpty(queue)) {
+	else
+		{
 		t_node *tmp = queue->front;
 		std::cout << "Queue(first is front) = ";
 		while ((tmp)) {
@@ -60,9 +61,9 @@ void printQueue(t_queue *queue) {
 }
 
 void push(t_queue *&queue, char data) {
-	if(!(queue)) {
+	if(!queue) {
 		init(queue);
-//		std::cout << "Something went wrong, data = " << data << " not added!!!" << '\n';
+//		std::cout << "Queue is empty!!!" << '\n';
 //		return;
 	}
 	if(0 == (size(queue)))
@@ -86,8 +87,6 @@ void push(t_queue *&queue, char data) {
 };
 
 void pop(t_queue *&queue) {
-	//	if (!*queue)
-	//		return;
 	if(size(queue) > 0) {
 		t_node *temp = (queue)->front;
 		(queue)->front = (queue)->front->next;
@@ -119,26 +118,12 @@ char front(t_queue *queue) {
 //	{
 //		push(queue, (char) ('a' + i));
 //	}
-//	pop(queue);
-//	pop(queue);
-//	pop(queue);
-//	pop(queue);
-//	pop(queue);
-//	pop(queue);
 //	push(queue, 'w');
-//	pop(queue);
-//	pop(queue);
-//	pop(queue);
-//	pop(queue);
-//	pop(queue);
-//	pop(queue);
-//	pop(queue);
-//	pop(queue);
+//
 //	printQueue(queue);
 //
 //	std::cout << "back = " << back(queue) << std::endl;
 //	deleteQueue(queue);
-//
 //}
 /*
  * original
