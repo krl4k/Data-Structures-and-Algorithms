@@ -13,7 +13,7 @@ typedef struct      s_node
 typedef struct  s_queue
 {
 	t_node *front;
-	t_node *end;
+	t_node *back;
 	int size;
 }               t_queue;
 

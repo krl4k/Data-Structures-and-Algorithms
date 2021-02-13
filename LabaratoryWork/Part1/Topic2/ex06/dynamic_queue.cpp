@@ -17,7 +17,7 @@ int size(t_queue *queue) {
 void init(t_queue* &queue) {
 	queue = new t_queue;
 	(queue)->front = new t_node;
-	(queue)->end = (queue)->front;
+	(queue)->back = (queue)->front;
 	(queue)->size = 0;
 }
 
@@ -26,9 +26,9 @@ void deleteQueue(t_queue *&queue) {
 		return;
 	while (!isEmpty(queue))
 		pop(queue);
-	if((queue)->end) {
-		delete (queue)->end;
-		(queue)->end = nullptr;
+	if((queue)->back) {
+		delete (queue)->back;
+		(queue)->back = nullptr;
 	}
 	delete queue;
 	queue = nullptr;
@@ -42,6 +42,7 @@ t_node *createElem(int data) {
 }
 
 void printQueue(t_queue *queue) {
+	std::cout << "------------Queue info-----------------" << std::endl;
 	if(isEmpty(queue))
 	{
 		std::cout << "Queue is empty!" << std::endl;
@@ -64,22 +65,22 @@ void push(t_queue *&queue, char data) {
 //		std::cout << "Something went wrong, data = " << data << " not added!!!" << '\n';
 //		return;
 	}
-	if(0 == (size(queue))) {
-		if((queue)->end) {
-			(queue)->front = (queue)->end;
+	if(0 == (size(queue)))
+	{
+		if((queue)->back)
+		{
+			(queue)->front = (queue)->back;
 			(queue)->front->data = data;
 			(queue)->front->next = nullptr;
-			//	(*queue)->end = (*queue)->front;
 			(queue)->size = 1;
-			std::cout << "size 0 end found" << '\n';
 		}
 		else
 			init(queue);
 
 	} else {
 		t_node *newElem = createElem(data);
-		(queue)->end->next = newElem;
-		(queue)->end = (queue)->end->next;
+		(queue)->back->next = newElem;
+		(queue)->back = (queue)->back->next;
 		(queue)->size++;
 	}
 };
@@ -98,7 +99,7 @@ void pop(t_queue *&queue) {
 
 char back(t_queue *queue) {
 	if(queue && size(queue) >= 0)
-		return queue->end->data;
+		return queue->back->data;
 //	std::cout << "back elem not found. Size of queue = 0!" << std::endl;
 	return 0;
 };
@@ -106,7 +107,7 @@ char back(t_queue *queue) {
 char front(t_queue *queue) {
 	if(queue && size(queue) > 0)
 		return queue->front->data;
-	std::cout << "front elem not found. Size of queue = 0!" << std::endl;
+//	std::cout << "front elem not found. Size of queue = 0!" << std::endl;
 	return 0;
 };
 
