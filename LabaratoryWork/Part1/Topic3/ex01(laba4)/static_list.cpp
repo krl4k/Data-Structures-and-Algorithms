@@ -2,15 +2,15 @@
 #include <iostream>
 #include "static_list.h"
 
-void	init(t_static_list *&list)
+void init(t_static_list *&list)
 {
 	list = new t_static_list;
 	list->size = 0;
 }
 
-bool	is_empty(t_static_list *list);
+bool is_empty(t_static_list *list);
 
-bool	is_full(t_static_list *list)
+bool is_full(t_static_list *list)
 {
 	if (list->size == SIZE)
 		return true;
@@ -18,28 +18,27 @@ bool	is_full(t_static_list *list)
 }
 
 
-int		size(t_static_list *list)
+int size(t_static_list *list)
 {
 	if (!list)
 		return 0;
 	return (list->size);
 }
 
-void	push_back(t_static_list *list, int data)
+void push_back(t_static_list *list, int data)
 {
 	if (is_full(list))
 	{
 		std::cout << "List is full" << std::endl;
 		return;
-	}
-	else
+	} else
 	{
 		list->list[list->size] = data;
 		list->size++;
 	}
 }
 
-void	push_front(t_static_list *list, int data)
+void push_front(t_static_list *list, int data)
 {
 	if (is_full(list))
 	{
@@ -50,8 +49,7 @@ void	push_front(t_static_list *list, int data)
 	{
 		list->list[list->size] = data;
 		list->size++;
-	}
-	else
+	} else
 	{
 		list->size++;
 //		for (int i = 1; i < list->size; i++)
@@ -72,7 +70,14 @@ void	push_front(t_static_list *list, int data)
 * \param data for a new item
 */
 
-void	push_before(t_static_list *list, int elem, int data)
+//void copy(t_static_list *list, int start, int end, int len)
+//{
+//	if (is_empty(list))
+//		return;
+//	while ()
+//}
+
+void push_before(t_static_list *list, int elem, int data)
 {
 	if (is_full(list))
 	{
@@ -86,49 +91,40 @@ void	push_before(t_static_list *list, int elem, int data)
 			break;
 		i++;
 	}
-//	if (i == list->size)
-//	{
-//		push_back(list, data);
-//		return;
-//	}
-//	else if (i == 0)
-//	{
-//		push_front(list, data);
-//		return;
-//	}
+	list->size++;
+	printf("list size = %d\n", list->size);
 
+
+//	list->list[list->size] = 0;
+	printf("list[%d] = %d\n", list->size, list->list[list->size]);
+	for (int j = list->size - 1; j >= i; j--)
 	{
-		printf("tut\n");
-		list->size++;
-		if (list->size == SIZE)
-			return;
-		int j = list->size;
-		for (int k = i; k < list->size - 1; k++)
-		{
-			list->list[k + 1] = list->list[k];
-		}
-//		for (; j > i; j--)
-//		{
-//			list->list[j] = list->list[j - 1];
-//		}
-		list->list[i] = data;
+		list->list[j] = list->list[j - 1];
+		printf("list[%d] = %d, list[%d] = %d\n", j, list->list[j], j - 1, list->list[j-1]);
 	}
+	list->list[i] = data;
 }
-void	push_after(t_static_list *list, int index, int data);
 
-void	pop_back(t_static_list *list, int index);
-void	pop_front(t_static_list *list, int index);
-void	pop_before(t_static_list *list, int index);
-void	pop_after(t_static_list *list, int data);
+void push_after(t_static_list *list, int index, int data);
 
-void	clear(t_static_list *&list)
+void pop_back(t_static_list *list, int index);
+
+void pop_front(t_static_list *list, int index);
+
+void pop_before(t_static_list *list, int index);
+
+void pop_after(t_static_list *list, int data);
+
+void clear(t_static_list *&list)
 {
 	delete list;
 	list = nullptr;
 }
-void	print_static_list(t_static_list *list)
+
+void print_static_list(t_static_list *list)
 {
 	std::cout << "Static list" << std::endl;
+	printf("list size = %d\n", list->size);
 	for (int i = 0; i < list->size; i++)
 	{
 		std::cout << list->list[i] << ' ';
@@ -145,7 +141,7 @@ int main()
 //	push_back(staticList, 1);
 //	push_back(staticList, 2);
 
-	for (int i = 0; i <4;)
+	for (int i = 0; i < 6;)
 	{
 		push_back(staticList, i);
 		i++;
