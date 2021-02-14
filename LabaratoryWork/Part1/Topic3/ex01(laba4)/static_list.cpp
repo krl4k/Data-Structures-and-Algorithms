@@ -77,6 +77,9 @@ void push_front(t_static_list *list, int data)
 //	while ()
 //}
 
+void shifting(t_static_list *list);
+
+
 void push_before(t_static_list *list, int elem, int data)
 {
 	if (is_full(list))
@@ -92,15 +95,13 @@ void push_before(t_static_list *list, int elem, int data)
 		i++;
 	}
 	list->size++;
-	printf("list size = %d\n", list->size);
-
-
+//	printf("list size = %d\n", list->size);
 //	list->list[list->size] = 0;
-	printf("list[%d] = %d\n", list->size, list->list[list->size]);
+//	printf("list[%d] = %d\n", list->size, list->list[list->size]);
 	for (int j = list->size - 1; j >= i; j--)
 	{
 		list->list[j] = list->list[j - 1];
-		printf("list[%d] = %d, list[%d] = %d\n", j, list->list[j], j - 1, list->list[j-1]);
+//		printf("list[%d] = %d, list[%d] = %d\n", j, list->list[j], j - 1, list->list[j-1]);
 	}
 	list->list[i] = data;
 }
@@ -124,7 +125,7 @@ void clear(t_static_list *&list)
 void print_static_list(t_static_list *list)
 {
 	std::cout << "Static list" << std::endl;
-	printf("list size = %d\n", list->size);
+//	printf("list size = %d\n", list->size);
 	for (int i = 0; i < list->size; i++)
 	{
 		std::cout << list->list[i] << ' ';
@@ -154,7 +155,7 @@ int main()
 	push_before(staticList, 3, 666);
 	push_before(staticList, 3, 666);
 	push_before(staticList, 3, 666);
-	printf("size = %d\n", staticList->size);
+//	printf("size = %d\n", staticList->size);
 //	push_before(staticList, 3, 666);
 //	push_before(staticList, 3, 666);
 //	for (int i = 5; i < 10;)
