@@ -12,13 +12,15 @@ typedef struct	s_static_list
 void	init(t_static_list *&list);
 void	clear(t_static_list *&list);
 
+void	push_sort(t_static_list *list, int data);
+
 void	push_back(t_static_list *list, int data);
 void	push_front(t_static_list *list, int data);
 void	push_before(t_static_list *list, int elem, int data);
 void	push_after(t_static_list *list, int elem, int data);
 
-void	pop_back(t_static_list *list, int index);
-void	pop_front(t_static_list *list, int index);
+void	pop_back(t_static_list *list);
+void	pop_front(t_static_list *list);
 void	pop_before(t_static_list *list, int index);
 void	pop_after(t_static_list *list, int data);
 
@@ -27,5 +29,7 @@ int		size(t_static_list *list);
 
 bool	is_empty(t_static_list *list);
 bool	is_full(t_static_list *list);
+
+int		get_index(t_static_list *list, int data);
 
 #endif //TEST_ARRAY_LIST_H

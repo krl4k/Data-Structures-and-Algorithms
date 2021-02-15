@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 
+
 int is_valid_input(const char *s)
 {
 	int i;
@@ -103,7 +104,7 @@ int main(void)
 				break;
 			case 6:
 				deleteQueue(&queue);
-				std::cout << "Clear Stack!" << std::endl;
+				std::cout << "Clear Queue!" << std::endl;
 				return (0);
 			default:
 				std::cout << "Try again!" << std::endl;

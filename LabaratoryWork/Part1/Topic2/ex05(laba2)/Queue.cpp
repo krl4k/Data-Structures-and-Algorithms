@@ -111,7 +111,7 @@ void deleteQueue(t_queue **queue)
 //		push(queue, i);
 //	}
 //	pop(queue);
-	pop(queue);
+//	pop(queue);
 //	if (isFull(queue))
 //		std::cout << "stack is full!" << std::endl;
 //	else
