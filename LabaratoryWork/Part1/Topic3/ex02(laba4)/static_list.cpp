@@ -1,5 +1,3 @@
-#include <list>
-#include <iostream>
 #include "static_list.h"
 
 void init(t_static_list *&list)
@@ -29,7 +27,6 @@ bool is_full(t_static_list *list)
 		return true;
 	return false;
 }
-
 
 int size(t_static_list *list)
 {
@@ -71,13 +68,6 @@ void push_front(t_static_list *list, int data)
 		list->list[0] = data;
 	}
 }
-
-
-/*!
-* \param2 data the element to which the addition occurs
-* \param data for a new item
-*/
-
 
 void push_before(t_static_list *list, int elem, int data)
 {
@@ -158,6 +148,37 @@ void pop_front(t_static_list *list)
 	list->size--;
 }
 
+void	pop_elem(t_static_list *list, int elem)
+{
+	if (is_empty(list))
+	{
+		std::cout << "List is empty" << std::endl;
+		return;
+	}
+	int i = 0;
+	while (i < list->size)
+	{
+		if (list->list[i] == elem)
+			break;
+		i++;
+	}
+	if (i == 0)
+	{
+		pop_front(list);
+		return;
+	}
+	if (i == list->size)
+	{
+//		pop_back(list);
+		return;
+	}
+	for (; i < list->size; i++)
+	{
+		list->list[i] = list->list[i+1];
+	}
+	list->size--;
+}
+
 void pop_before(t_static_list *list, int elem)
 {
 	if (is_empty(list))
@@ -222,6 +243,8 @@ void pop_after(t_static_list *list, int elem)
 void print_static_list(t_static_list *list)
 {
 	std::cout << "Static list" << std::endl;
+	std::cout << "list size = " << list->size << std::endl;
+
 	for (int i = 0; i < list->size; i++)
 	{
 		std::cout << list->list[i] << ' ';
@@ -244,7 +267,10 @@ int		get_index(t_static_list *list, int data)
 void	push_sort(t_static_list *list, int data)
 {
 	if (!list)
+	{
+		std::cout << "List not allocated!" << std::endl;
 		return;
+	}
 	if (is_full(list))
 	{
 		std::cout << "List is full" << std::endl;
@@ -252,16 +278,16 @@ void	push_sort(t_static_list *list, int data)
 	}
 	if (list->size == 0)
 	{
+		printf("push front!\n");
 		push_front(list, data);
 		return;
 	}
-
 	int i = 0;
 	while (i < list->size)
 	{
 		if (data < list->list[i])
 		{
-			push_before(list, i, data);
+			push_before(list, list->list[i], data);
 			return;
 		}
 		i++;
@@ -273,27 +299,40 @@ void	push_sort(t_static_list *list, int data)
 	}
 }
 
+
+/*
+
 int main()
 {
 	t_static_list *staticList = nullptr;
 	init(staticList);
 
-//	for (int i = 0; i < 4;)
-//	{
-//		push_back(staticList, i);
-//		i++;
-//	}
-//
-	push_sort(staticList, 0);
-	push_sort(staticList, 432);
-	push_sort(staticList, 10);
-	push_sort(staticList, 11);
-	push_sort(staticList, 1);
-	push_sort(staticList, 9834);
-//	pop_before(staticList, 1);
-//	pop_after(staticList, 1);
+	srand(time(NULL));
+	for (int i = 0; i < 5; i++)
+	{
+		push_sort(staticList, i);
+//		push_sort(staticList, rand() % 100);
+	}
+
+	for (int i = 10; i < 15; ++i)
+	{
+		push_sort(staticList, i);
+//		push_sort(staticList, rand() % 100);
+	}
+
 	print_static_list(staticList);
 
+	for (int i = 12; i < 15; ++i)
+	{
+		pop_elem(staticList, i);
+	}
 
-//	push_before(staticList, 3, 666);
+//	for (int i = 20; i > 7; i--)
+//	{
+//		pop_elem(staticList, i);
+//	}
+//	pop_elem(staticList, 0);
+	print_static_list(staticList);
+
 }
+*/
