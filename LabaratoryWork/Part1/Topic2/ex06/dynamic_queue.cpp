@@ -24,11 +24,19 @@ void init(t_queue* &queue) {
 void deleteQueue(t_queue *&queue) {
 	if(!queue)
 		return;
-	while (!isEmpty(queue))
-		pop(queue);
-	if((queue)->back) {
-		delete (queue)->back;
-		(queue)->back = nullptr;
+//	while (!isEmpty(queue))
+//		pop(queue);
+//	if((queue)->back) {
+//		delete (queue)->back;
+//		(queue)->back = nullptr;
+//	}
+	while (queue->size)
+	{
+		t_node *temp;
+		temp = queue->front->next;
+		delete queue->front;
+		queue->front = temp;
+		queue->size--;
 	}
 	delete queue;
 	queue = nullptr;
@@ -85,7 +93,7 @@ void push(t_queue *&queue, char data) {
 		(queue)->size++;
 	}
 };
-
+/*
 void pop(t_queue *&queue) {
 	if(size(queue) > 0) {
 		t_node *temp = (queue)->front;
@@ -93,6 +101,19 @@ void pop(t_queue *&queue) {
 		(queue)->size--;
 		if((queue)->size > 0)
 			delete temp;
+	}
+}*/
+
+void pop(t_queue *&queue) {
+	if(size(queue) > 0)
+	{
+		t_node *temp = (queue)->front;
+//		temp->next = queue->back;
+		(queue)->front = (queue)->front->next;
+		queue->back->next = temp;
+		temp->next = nullptr;
+		queue->back = queue->back->next;
+//		(queue)->size--;
 	}
 }
 
@@ -109,26 +130,50 @@ char front(t_queue *queue) {
 //	std::cout << "front elem not found. Size of queue = 0!" << std::endl;
 	return 0;
 };
+int main()
+{
+	t_queue *queue = nullptr;
+	init(queue);
+	for (int i = 0; i < 5; i++)
+	{
+		push(queue, (char) ('a' + i));
+	}
+	printQueue(queue);
 
-//int main()
-//{
-//	t_queue *queue = nullptr;
-//	init(queue);
-//	for (int i = 0; i < 5; i++)
-//	{
-//		push(queue, (char) ('a' + i));
-//	}
+	for (int i = 0; i < 4; ++i)
+	{
+		pop(queue);
+	}
+	push(queue, 'A');
+	push(queue, 'B');
+	push(queue, 'C');
+	push(queue, 'D');
+	printQueue(queue);
+
+	pop(queue);
+	pop(queue);
 //	push(queue, 'w');
+	printQueue(queue);
 //
+//	pop(queue);
 //	printQueue(queue);
 //
-//	std::cout << "back = " << back(queue) << std::endl;
-//	deleteQueue(queue);
-//}
-/*
- * original
- */
-	//	std::queue<int> queue;
+//	push(queue, 'r');
+//	printQueue(queue);
+//
+//	pop(queue);
+//	printQueue(queue);
+//
+//	push(queue, 'h');
+//	printQueue(queue);
+
+	std::cout << "back = " << back(queue) << std::endl;
+	deleteQueue(queue);
+}
+///*
+// * original
+// */
+//		std::queue<int> queue;
 //	queue.push(1);
 //	queue.push(2);
 //	queue.push(3);

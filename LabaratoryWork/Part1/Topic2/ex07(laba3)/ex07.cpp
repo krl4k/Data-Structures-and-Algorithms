@@ -81,7 +81,7 @@ void work_proccess(t_queue *&queue)
 			n = get_random_int(1, 3);
 			if (size(queue) < n)
 				n = size(queue);
-			std::cout << "Deleted " << n << " elements!" << std::endl;
+//			std::cout << "Deleted " << n << " elements!" << std::endl;
 			for (int i = 0; i < n; ++i)
 			{
 				if (!isEmpty(queue))

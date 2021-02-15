@@ -32,7 +32,8 @@ link_directories(
 #        )
 
 #LABA 3
-#add_executable(laba3
-#        LabaratoryWork/Part1/Topic2/ex06/dynamic_queue.cpp LabaratoryWork/Part1/Topic2/ex07\(laba3\)/ex07.cpp
-#        )
+add_executable(laba3
+        LabaratoryWork/Part1/Topic2/ex06/dynamic_queue.cpp
+#        LabaratoryWork/Part1/Topic2/ex07\(laba3\)/ex07.cpp
+        )
 
