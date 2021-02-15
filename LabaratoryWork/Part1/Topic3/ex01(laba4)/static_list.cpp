@@ -73,10 +73,7 @@ void push_front(t_static_list *list, int data)
 }
 
 
-/*!
-* \param2 data the element to which the addition occurs
-* \param data for a new item
-*/
+
 
 
 void push_before(t_static_list *list, int elem, int data)
@@ -261,7 +258,9 @@ void	push_sort(t_static_list *list, int data)
 	{
 		if (data < list->list[i])
 		{
-			push_before(list, i, data);
+			printf("tut\n");
+			printf("lis[i] %d\n", list->list[i]);
+			push_before(list, list->list[i], data);
 			return;
 		}
 		i++;
@@ -283,13 +282,23 @@ int main()
 //		push_back(staticList, i);
 //		i++;
 //	}
-//
-	push_sort(staticList, 0);
-	push_sort(staticList, 432);
-	push_sort(staticList, 10);
-	push_sort(staticList, 11);
-	push_sort(staticList, 1);
-	push_sort(staticList, 9834);
+
+	srand(time(NULL));
+	for (int i = 0; i < 5; ++i)
+	{
+		push_sort(staticList, rand() % 100);
+		printf("list = %d\n", staticList->list[i]);
+	}
+	push_back(staticList, 66);
+	push_back(staticList, 66);
+	push_front(staticList, 66);
+	push_front(staticList, 66);
+//	push_sort(staticList, 0);
+//	push_sort(staticList, 432);
+//	push_sort(staticList, 10);
+//	push_sort(staticList, 11);
+//	push_sort(staticList, 1);
+//	push_sort(staticList, 9834);
 //	pop_before(staticList, 1);
 //	pop_after(staticList, 1);
 	print_static_list(staticList);

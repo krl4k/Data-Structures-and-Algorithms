@@ -16,11 +16,17 @@ void	push_sort(t_static_list *list, int data);
 
 void	push_back(t_static_list *list, int data);
 void	push_front(t_static_list *list, int data);
+/*!
+* \param2 data the element to which the addition occurs
+* \param3 data for a new item
+*/
 void	push_before(t_static_list *list, int elem, int data);
 void	push_after(t_static_list *list, int elem, int data);
 
 void	pop_back(t_static_list *list);
 void	pop_front(t_static_list *list);
+
+
 void	pop_before(t_static_list *list, int index);
 void	pop_after(t_static_list *list, int data);
 
