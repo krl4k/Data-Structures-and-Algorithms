@@ -1,5 +1,3 @@
-#include <list>
-#include <iostream>
 #include "static_list.h"
 
 void init(t_static_list *&list)
@@ -29,7 +27,6 @@ bool is_full(t_static_list *list)
 		return true;
 	return false;
 }
-
 
 int size(t_static_list *list)
 {
@@ -71,10 +68,6 @@ void push_front(t_static_list *list, int data)
 		list->list[0] = data;
 	}
 }
-
-
-
-
 
 void push_before(t_static_list *list, int elem, int data)
 {
@@ -151,6 +144,37 @@ void pop_front(t_static_list *list)
 	for (int j = 0; j < list->size; j++)
 	{
 		list->list[j] = list->list[j + 1];
+	}
+	list->size--;
+}
+
+void	pop_elem(t_static_list *list, int elem)
+{
+	if (is_empty(list))
+	{
+		std::cout << "List is empty" << std::endl;
+		return;
+	}
+	int i = 0;
+	while (i < list->size)
+	{
+		if (list->list[i] == elem)
+			break;
+		i++;
+	}
+	if (i == 0)
+	{
+		pop_front(list);
+		return;
+	}
+	if (i == list->size)
+	{
+//		pop_back(list);
+		return;
+	}
+	for (; i < list->size; i++)
+	{
+		list->list[i] = list->list[i+1];
 	}
 	list->size--;
 }
@@ -252,14 +276,11 @@ void	push_sort(t_static_list *list, int data)
 		push_front(list, data);
 		return;
 	}
-
 	int i = 0;
 	while (i < list->size)
 	{
 		if (data < list->list[i])
 		{
-			printf("tut\n");
-			printf("lis[i] %d\n", list->list[i]);
 			push_before(list, list->list[i], data);
 			return;
 		}
@@ -277,32 +298,31 @@ int main()
 	t_static_list *staticList = nullptr;
 	init(staticList);
 
-//	for (int i = 0; i < 4;)
-//	{
-//		push_back(staticList, i);
-//		i++;
-//	}
-
 	srand(time(NULL));
-	for (int i = 0; i < 5; ++i)
+	for (int i = 0; i < 5; i++)
 	{
-		push_sort(staticList, rand() % 100);
-		printf("list = %d\n", staticList->list[i]);
+		push_sort(staticList, i);
+//		push_sort(staticList, rand() % 100);
 	}
-	push_back(staticList, 66);
-	push_back(staticList, 66);
-	push_front(staticList, 66);
-	push_front(staticList, 66);
-//	push_sort(staticList, 0);
-//	push_sort(staticList, 432);
-//	push_sort(staticList, 10);
-//	push_sort(staticList, 11);
-//	push_sort(staticList, 1);
-//	push_sort(staticList, 9834);
-//	pop_before(staticList, 1);
-//	pop_after(staticList, 1);
+
+	for (int i = 10; i < 15; ++i)
+	{
+		push_sort(staticList, i);
+//		push_sort(staticList, rand() % 100);
+	}
+
 	print_static_list(staticList);
 
+	for (int i = 12; i < 15; ++i)
+	{
+		pop_elem(staticList, i);
+	}
 
-//	push_before(staticList, 3, 666);
+//	for (int i = 20; i > 7; i--)
+//	{
+//		pop_elem(staticList, i);
+//	}
+//	pop_elem(staticList, 0);
+	print_static_list(staticList);
+
 }
