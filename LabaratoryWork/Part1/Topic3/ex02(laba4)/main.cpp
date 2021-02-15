@@ -1,4 +1,3 @@
-#define INT
 #include "static_list.h"
 
 int is_valid_input(const char *s)
@@ -31,6 +30,8 @@ char *get_s_number()
 int get_int_number(char *num)
 {
 	int n = atoi(num);
+	printf("str = %s\n", num);
+	printf("n get_num = %d\n", n);
 	return (n);
 }
 
@@ -38,18 +39,21 @@ int menu()
 {
 	std::string str;
 	std::cout << "----------------------" << std::endl;
-	std::cout << "|PushBack Elem:   1|" << std::endl;
-	std::cout << "|PushFront Elem:  2|" << std::endl;
-	std::cout << "|PushBefore Elem:  2|" << std::endl;
-	std::cout << "|PushAfter Elem:  2|" << std::endl;
-	std::cout << "|PopBack Elem:    3|" << std::endl;
-	std::cout << "|PopFront Elem:   4|" << std::endl;
-	std::cout << "|PopBefore Elem:   4|" << std::endl;
-	std::cout << "|PopAfter Elem:   4|" << std::endl;
-	std::cout << "|Print List:      5|" << std::endl;
-	std::cout << "|Full  Check Queue: 5|" << std::endl;
-	std::cout << "|Exit:              6|" << std::endl;
-	std::cout << "|Enter a number:  ";
+	std::cout << "|Push  		:  1|" << std::endl;
+	std::cout << "|Pop  		:  2|" << std::endl;
+	std::cout << "|Print List 	:  3|" << std::endl;
+	std::cout << "|Exit       	:  4|" << std::endl;
+
+//	std::cout << "|PushBefore 	:  3|" << std::endl;
+//	std::cout << "|PushAfter  	:  4|" << std::endl;
+//	std::cout << "|Pop        	:  5|" << std::endl;
+//	std::cout << "|PopBack    	:  6|" << std::endl;
+//	std::cout << "|PopFront   	:  7|" << std::endl;
+//	std::cout << "|PopBefore  	:  8|" << std::endl;
+//	std::cout << "|PopAfter   	:  9|" << std::endl;
+//	std::cout << "|Print List 	: 10|" << std::endl;
+//	std::cout << "|Exit       	: 11|" << std::endl;
+	std::cout << "|Enter a 	:  ";
 	std::cin >> str;
 	std::cout << "|--------------------|" << std::endl;
 
@@ -66,6 +70,7 @@ int menu()
 int main(void)
 {
 	t_static_list *list;
+	init(list);
 	std::cout << "This works for 99.9999999999999999999999999999999999999999999990% ~ 100%" << std::endl;
 	int op_num;
 	char *num;
@@ -83,29 +88,25 @@ int main(void)
 					break;
 				}
 				n = get_int_number(num);
-				push(queue, n);
+				printf("n = %d\n", n);
+				push_sort(list, n);
 				break;
 			case 2:
-				pop(queue);
+				std::cout << "Enter elem to delete: ";
+				if(!(num = get_s_number()))
+				{
+					std::cout << "Bad input" << std::endl;
+					break;
+				}
+				n = get_int_number(num);
+				pop_elem(list, n);
 				break;
 			case 3:
-				printQueue(queue);
+				print_static_list(list);
 				break;
 			case 4:
-				if(isEmpty(queue))
-					std::cout << "Queue is empty!" << std::endl;
-				else
-					std::cout << "Queue not empty!" << std::endl;
-				break;
-			case 5:
-				if(isFull(queue))
-					std::cout << "Queue is full!" << std::endl;
-				else
-					std::cout << "Queue not full!" << std::endl;
-				break;
-			case 6:
-				deleteQueue(&queue);
-				std::cout << "Clear Queue!" << std::endl;
+				clear(list);
+				std::cout << "Clear List!" << std::endl;
 				return (0);
 			default:
 				std::cout << "Try again!" << std::endl;

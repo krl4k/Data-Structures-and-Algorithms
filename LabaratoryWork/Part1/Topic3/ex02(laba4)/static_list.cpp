@@ -243,6 +243,8 @@ void pop_after(t_static_list *list, int elem)
 void print_static_list(t_static_list *list)
 {
 	std::cout << "Static list" << std::endl;
+	std::cout << "list size = " << list->size << std::endl;
+
 	for (int i = 0; i < list->size; i++)
 	{
 		std::cout << list->list[i] << ' ';
@@ -265,7 +267,10 @@ int		get_index(t_static_list *list, int data)
 void	push_sort(t_static_list *list, int data)
 {
 	if (!list)
+	{
+		std::cout << "List not allocated!" << std::endl;
 		return;
+	}
 	if (is_full(list))
 	{
 		std::cout << "List is full" << std::endl;
@@ -273,6 +278,7 @@ void	push_sort(t_static_list *list, int data)
 	}
 	if (list->size == 0)
 	{
+		printf("push front!\n");
 		push_front(list, data);
 		return;
 	}
@@ -292,6 +298,9 @@ void	push_sort(t_static_list *list, int data)
 		return;
 	}
 }
+
+
+/*
 
 int main()
 {
@@ -326,3 +335,4 @@ int main()
 	print_static_list(staticList);
 
 }
+*/
