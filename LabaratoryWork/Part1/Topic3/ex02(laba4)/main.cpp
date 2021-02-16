@@ -66,6 +66,7 @@ int menu()
 }
 
 
+#if INT == 1
 
 int main(void)
 {
@@ -113,3 +114,42 @@ int main(void)
 		}
 	}
 }
+
+#else
+
+int main(void)
+{
+    t_static_list *list;
+    init(list);
+    std::cout << "This works for 99.9999999999999999999999999999999999999999999990% ~ 100%" << std::endl;
+    int op_num;
+    std::string string;
+    while (1)
+    {
+        op_num = menu();
+        switch (op_num)
+        {
+            case (1):
+                std::cout << "Enter elem to add: ";
+                std::cin >> string;
+                push_sort(list, string);
+                break;
+            case 2:
+                std::cout << "Enter elem to delete: ";
+                std::cin >> string;
+                pop_elem(list, string);
+                break;
+            case 3:
+                print_static_list(list);
+                break;
+            case 4:
+                clear(list);
+                std::cout << "Clear List!" << std::endl;
+                return (0);
+            default:
+                std::cout << "Try again!" << std::endl;
+        }
+    }
+}
+
+#endif

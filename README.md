@@ -21,3 +21,7 @@
   * [Варианты добавления элементов в связный список](https://habr.com/ru/post/532004/)
 ### Videos
   * [Оценка сложности алгоритма. Сложность алгоритмов.](https://www.youtube.com/watch?v=ZRdOb4yR0kk&ab_channel=CronisAcademy)
+
+
+### Labs
+  4. [Линейный список на базе массива](https://rsdn.org/article/alg/list.xml)
