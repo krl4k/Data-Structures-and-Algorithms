@@ -277,7 +277,6 @@ void	push_sort(t_static_list *list, int data)
 	}
 	if (list->size == 0)
 	{
-		printf("push front!\n");
 		push_front(list, data);
 		return;
 	}

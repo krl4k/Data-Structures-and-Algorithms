@@ -30,8 +30,6 @@ char *get_s_number()
 int get_int_number(char *num)
 {
 	int n = atoi(num);
-	printf("str = %s\n", num);
-	printf("n get_num = %d\n", n);
 	return (n);
 }
 
@@ -89,7 +87,6 @@ int main(void)
 					break;
 				}
 				n = get_int_number(num);
-				printf("n = %d\n", n);
 				push_sort(list, n);
 				break;
 			case 2:

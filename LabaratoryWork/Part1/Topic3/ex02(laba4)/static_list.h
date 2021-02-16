@@ -2,9 +2,11 @@
 #define ARRAY_LIST_H
 #include <iostream>
 #include <cstring>
-#include <string.h>
-#define INT 2
 #define  DEBUG 2
+
+#ifndef INT
+#define INT 1
+#endif
 
 #define SIZE 10
 
