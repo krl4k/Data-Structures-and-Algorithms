@@ -1,98 +1,87 @@
 #include "dynamic_queue.h"
 #include <queue>
+
 bool isEmpty(t_queue *queue) {
-	if (!queue)
-		return false;
-	if(queue->size == 0)
-		return true;
-	return false;
+    if (!queue)
+        return false;
+    if (queue->size == 0)
+        return true;
+    return false;
 }
 
 int size(t_queue *queue) {
-	if(queue)
-		return (queue->size);
-	return 0;
+    if (queue)
+        return (queue->size);
+    return 0;
 }
 
-void init(t_queue* &queue) {
-	queue = new t_queue;
-	(queue)->front = new t_node;
-	(queue)->back = (queue)->front;
-	(queue)->size = 0;
+void init(t_queue *&queue) {
+    if (!queue)
+        queue = new t_queue;
+    (queue)->front = new t_node;
+    (queue)->back = (queue)->front;
+    (queue)->size = 0;
 }
 
 void deleteQueue(t_queue *&queue) {
-	if(!queue)
-		return;
-//	while (!isEmpty(queue))
-//		pop(queue);
-//	if((queue)->back) {
-//		delete (queue)->back;
-//		(queue)->back = nullptr;
-//	}
-	while (queue->size)
-	{
-		t_node *temp;
-		temp = queue->front->next;
-		delete queue->front;
-		queue->front = temp;
-		queue->size--;
-	}
-	delete queue;
-	queue = nullptr;
+    if (!queue)
+        return;
+    while (queue->size) {
+        t_node *temp;
+        temp = queue->front->next;
+        delete queue->front;
+        queue->front = temp;
+        queue->size--;
+    }
+    delete queue;
+    queue = nullptr;
 }
 
 t_node *createElem(int data) {
-	t_node *newElem = new t_node;
-	newElem->data = data;
-	newElem->next = nullptr;
-	return (newElem);
+    t_node *newElem = new t_node;
+    newElem->data = data;
+    newElem->next = nullptr;
+    return (newElem);
 }
 
 void printQueue(t_queue *queue) {
-	std::cout << "------------Queue info-----------------" << std::endl;
-	if(!queue || isEmpty(queue))
-	{
-		std::cout << "Queue is empty!" << std::endl;
-		return;
-	}
-	else
-		{
-		t_node *tmp = queue->front;
-		std::cout << "Queue(first is front) = ";
-		while ((tmp)) {
-			std::cout << tmp->data << ' ';
-			tmp = tmp->next;
-		}
-		std::cout << '\n';
-	}
+    std::cout << "------------Queue info-----------------" << std::endl;
+    if (!queue || isEmpty(queue)) {
+        std::cout << "Queue is empty!" << std::endl;
+    } else {
+        t_node *tmp = queue->front;
+        std::cout << "Queue(first is front) = ";
+        for (int i = 0; i < queue->size && tmp; ++i) {
+            std::cout << tmp->data << ' ';
+            tmp = tmp->next;
+        }
+        std::cout << '\n';
+    }
+    std::cout << "---------------------------------------" << std::endl;
 }
 
 void push(t_queue *&queue, char data) {
-	if(!queue) {
-		init(queue);
-//		std::cout << "Queue is empty!!!" << '\n';
-//		return;
-	}
-	if(0 == (size(queue)))
-	{
-		if((queue)->back)
-		{
-			(queue)->front = (queue)->back;
-			(queue)->front->data = data;
-			(queue)->front->next = nullptr;
-			(queue)->size = 1;
-		}
-		else
-			init(queue);
-
-	} else {
-		t_node *newElem = createElem(data);
-		(queue)->back->next = newElem;
-		(queue)->back = (queue)->back->next;
-		(queue)->size++;
-	}
+    if (!queue) {
+        init(queue);
+//        std::cout << "Queue is empty!!!" << '\n';
+//        return;
+    }
+    if (0 == (size(queue))) {
+        if ((queue)->back) {
+            printf("tut!\n");
+            (queue)->front = (queue)->back;
+            (queue)->front->data = data;
+            (queue)->size = 1;
+        }
+    } else {
+        t_node *newElem = createElem(data);
+        (queue)->back->next = newElem;
+        (queue)->back = (queue)->back->next;
+        (queue)->back->next = queue->front;
+        (queue)->size++;
+    }
 };
+
 /*
 void pop(t_queue *&queue) {
 	if(size(queue) > 0) {
@@ -105,71 +94,59 @@ void pop(t_queue *&queue) {
 }*/
 
 void pop(t_queue *&queue) {
-	if(size(queue) > 0)
-	{
-		t_node *temp = (queue)->front;
-//		temp->next = queue->back;
-		(queue)->front = (queue)->front->next;
-		queue->back->next = temp;
-		temp->next = nullptr;
-		queue->back = queue->back->next;
-//		(queue)->size--;
-	}
+    if (size(queue) > 0) {
+        t_node *temp = (queue)->front;
+        queue->front = queue->front->next;
+        if (queue->size > 1) {
+            delete temp;
+            temp = nullptr;
+        }
+        (queue)->size--;
+    }
 }
 
 char back(t_queue *queue) {
-	if(queue && size(queue) >= 0)
-		return queue->back->data;
-//	std::cout << "back elem not found. Size of queue = 0!" << std::endl;
-	return 0;
+    if (queue && size(queue) >= 0)
+        return queue->back->data;
+    return 0;
 };
 
 char front(t_queue *queue) {
-	if(queue && size(queue) > 0)
-		return queue->front->data;
-//	std::cout << "front elem not found. Size of queue = 0!" << std::endl;
-	return 0;
+    if (queue && size(queue) > 0)
+        return queue->front->data;
+    return 0;
 };
-int main()
-{
-	t_queue *queue = nullptr;
-	init(queue);
-	for (int i = 0; i < 5; i++)
-	{
-		push(queue, (char) ('a' + i));
-	}
-	printQueue(queue);
+/*
+int main() {
+    t_queue *queue = nullptr;
+//    init(queue);
+    for (int i = 0; i < 5; i++) {
+        push(queue, (char) ('a' + i));
+    }
+    printQueue(queue);
 
-	for (int i = 0; i < 4; ++i)
-	{
-		pop(queue);
-	}
-	push(queue, 'A');
-	push(queue, 'B');
-	push(queue, 'C');
-	push(queue, 'D');
-	printQueue(queue);
+    for (int i = 0; i < 10; ++i) {
+        pop(queue);
+    }
+    printQueue(queue);
+    std::cout << "back = " << back(queue) << std::endl;
+    std::cout << "front = " << front(queue) << std::endl;
 
-	pop(queue);
-	pop(queue);
-//	push(queue, 'w');
-	printQueue(queue);
-//
-//	pop(queue);
-//	printQueue(queue);
-//
-//	push(queue, 'r');
-//	printQueue(queue);
-//
-//	pop(queue);
-//	printQueue(queue);
-//
-//	push(queue, 'h');
-//	printQueue(queue);
+    for (int i = 0; i < 5; i++) {
+        push(queue, (char) ('j' + i));
+    }
+    printQueue(queue);
+    pop(queue);
+    printQueue(queue);
+    std::cout << "back = " << back(queue) << std::endl;
+    std::cout << "front = " << front(queue) << std::endl;
 
-	std::cout << "back = " << back(queue) << std::endl;
-	deleteQueue(queue);
-}
+    deleteQueue(queue);
+    push(queue, 'A');
+    printQueue(queue);
+    std::cout << "back = " << back(queue) << std::endl;
+    std::cout << "front = " << front(queue) << std::endl;
+}*/
 ///*
 // * original
 // */
