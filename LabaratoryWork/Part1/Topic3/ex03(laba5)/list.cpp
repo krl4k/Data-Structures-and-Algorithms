@@ -47,7 +47,7 @@ static int find_empty_index(t_list *list)
 {
 	int temp = list->node[0].next;
 	int prev = 0;
-	//найти ячейку которая ссылается на -1
+	//найти ячейку (последняя) которая ссылается на -1
 	while (temp != -1)
 	{
 		prev = temp;
@@ -191,6 +191,39 @@ void	push_after(t_list *list, std::string elem, std::string data)
 	list->size++;
 }
 
+void pop_elem(t_list *list, std::string elem)
+{
+	if (is_empty(list))
+	{
+		std::cout << "List is empty!" << std::endl;
+		return;
+	}
+	int i = 1;
+	int before_deleted;
+	int temp = list->node[0].next;
+	while (temp != -1)
+	{
+		if (list->node[temp].data == elem)
+			break;
+		before_deleted = temp;
+		temp = list->node[temp].next;
+		i++;
+	}
+	if (i == list->size)
+	{
+		std::cout << "Elem not in list!" << std::endl;
+		return;
+	}
+	if (i == 1)
+	{
+		pop_front(list);
+		return;
+	}
+	list->node[before_deleted].next = list->node[temp].next;
+	list->node[temp].next = -1;
+	list->size--;
+}
+
 void pop_front(t_list *list)
 {
 	if (is_empty(list))
@@ -248,21 +281,17 @@ int main()
 {
 	t_list *list;
 	init(list);
-//	for (int i = 0; i < 6; ++i)
-//	{
-//		if (i % 2 == 0)
-//			push_back(list, std::to_string(i));
-//		else
-//			push_front(list, std::to_string(i));
-//	}
-	push_back(list, "first");
-	push_after(list, "first", "2");
-	push_before(list, "first", "0");
-	push_before(list, "first", "123");
-	push_after(list, "first", "321");
-	push_back(list, "back");
-	push_front(list, "fro");
+	for (int i = 0; i < 6; ++i)
+	{
+		if (i % 2 == 0)
+			push_back(list, std::to_string(i));
+		else
+			push_front(list, std::to_string(i));
+	}
 
+	print_list(list);
+
+	pop_elem(list, "123");
 	print_list(list);
 
 	int temp = list->node[0].next;
