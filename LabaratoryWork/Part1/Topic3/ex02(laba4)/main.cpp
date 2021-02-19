@@ -37,10 +37,10 @@ int menu()
 {
 	std::string str;
 	std::cout << "----------------------" << std::endl;
-	std::cout << "|Push  		:  1|" << std::endl;
-	std::cout << "|Pop  		:  2|" << std::endl;
-	std::cout << "|Print List 	:  3|" << std::endl;
-	std::cout << "|Exit       	:  4|" << std::endl;
+	std::cout << "|Push  			:  1|" << std::endl;
+	std::cout << "|Pop  			:  2|" << std::endl;
+	std::cout << "|Print List 		:  3|" << std::endl;
+	std::cout << "|Exit       		:  4|" << std::endl;
 
 //	std::cout << "|PushBefore 	:  3|" << std::endl;
 //	std::cout << "|PushAfter  	:  4|" << std::endl;

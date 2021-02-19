@@ -27,6 +27,25 @@ void	push_sort(t_list *list, std::string data);
 void	push_back(t_list *list, std::string data);
 void	push_front(t_list *list, std::string data);
 
+/*!
+ *
+ * @param list
+ * @param elem before push
+ * @param data to push
+ */
+void	push_before(t_list *list, std::string elem, std::string data);
+
+/*!
+ *
+ * @param list
+ * @param elem after push
+ * @param data to push
+ */
+void	push_after(t_list *list, std::string elem, std::string data);
+
+void	pop_front(t_list *list);
+void	pop_back(t_list *list);
+
 void	print_list(t_list *list);
 
 
