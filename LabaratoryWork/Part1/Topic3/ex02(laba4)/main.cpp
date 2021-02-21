@@ -5,6 +5,8 @@ int is_valid_input(const char *s)
 	int i;
 
 	i = 0;
+    while (s[i] == '-' || s[i] == '+')
+        i++;
 	while (s[i])
 	{
 		if(!isdigit(s[i]))
@@ -14,6 +16,12 @@ int is_valid_input(const char *s)
 	return (1);
 }
 
+
+/*!
+ *
+ * @return
+ * @warning free str after using!!
+ */
 char *get_s_number()
 {
 	std::string s;
@@ -21,7 +29,7 @@ char *get_s_number()
 	const char *num = s.c_str();
 	if(is_valid_input(num))
 	{
-		return (char *) num;
+        return strdup(num);;
 	}
 	else
 		return nullptr;
@@ -87,6 +95,8 @@ int main(void)
 					break;
 				}
 				n = get_int_number(num);
+				free(num);
+				//add push function
 				push_sort(list, n);
 				break;
 			case 2:
@@ -97,7 +107,8 @@ int main(void)
 					break;
 				}
 				n = get_int_number(num);
-				pop_elem(list, n);
+                free(num);
+                pop_elem(list, n);
 				break;
 			case 3:
 				print_static_list(list);
