@@ -59,19 +59,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /snap/clion/139/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
+RM = /snap/clion/139/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms
+CMAKE_SOURCE_DIR = /home/kirill/Документы/4семестр/algorithms_and_data_structures/labs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms/cmake-build-debug
+CMAKE_BINARY_DIR = /home/kirill/Документы/4семестр/algorithms_and_data_structures/labs/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,7 +79,7 @@ CMAKE_BINARY_DIR = /Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms/
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/snap/clion/139/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -90,7 +90,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/snap/clion/139/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -100,9 +100,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms/cmake-build-debug/CMakeFiles /Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kirill/Документы/4семестр/algorithms_and_data_structures/labs/cmake-build-debug/CMakeFiles /home/kirill/Документы/4семестр/algorithms_and_data_structures/labs/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kirill/Документы/4семестр/algorithms_and_data_structures/labs/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -131,44 +131,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named laba5
+# Target rules for targets named laba6
 
 # Build rule for target.
-laba5: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 laba5
-.PHONY : laba5
+laba6: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 laba6
+.PHONY : laba6
 
 # fast build rule for target.
-laba5/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/laba5.dir/build.make CMakeFiles/laba5.dir/build
-.PHONY : laba5/fast
-
-LabaratoryWork/Part1/Topic3/ex03(laba5)/list.o: LabaratoryWork/Part1/Topic3/ex03(laba5)/list.cpp.o
-
-.PHONY : LabaratoryWork/Part1/Topic3/ex03(laba5)/list.o
-
-# target to build an object file
-LabaratoryWork/Part1/Topic3/ex03(laba5)/list.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/laba5.dir/build.make "CMakeFiles/laba5.dir/LabaratoryWork/Part1/Topic3/ex03(laba5)/list.cpp.o"
-.PHONY : LabaratoryWork/Part1/Topic3/ex03(laba5)/list.cpp.o
-
-LabaratoryWork/Part1/Topic3/ex03(laba5)/list.i: LabaratoryWork/Part1/Topic3/ex03(laba5)/list.cpp.i
-
-.PHONY : LabaratoryWork/Part1/Topic3/ex03(laba5)/list.i
-
-# target to preprocess a source file
-LabaratoryWork/Part1/Topic3/ex03(laba5)/list.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/laba5.dir/build.make "CMakeFiles/laba5.dir/LabaratoryWork/Part1/Topic3/ex03(laba5)/list.cpp.i"
-.PHONY : LabaratoryWork/Part1/Topic3/ex03(laba5)/list.cpp.i
-
-LabaratoryWork/Part1/Topic3/ex03(laba5)/list.s: LabaratoryWork/Part1/Topic3/ex03(laba5)/list.cpp.s
-
-.PHONY : LabaratoryWork/Part1/Topic3/ex03(laba5)/list.s
-
-# target to generate assembly for a file
-LabaratoryWork/Part1/Topic3/ex03(laba5)/list.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/laba5.dir/build.make "CMakeFiles/laba5.dir/LabaratoryWork/Part1/Topic3/ex03(laba5)/list.cpp.s"
-.PHONY : LabaratoryWork/Part1/Topic3/ex03(laba5)/list.cpp.s
+laba6/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laba6.dir/build.make CMakeFiles/laba6.dir/build
+.PHONY : laba6/fast
 
 LabaratoryWork/Part1/Topic3/ex05(laba6)/dynamic_list.o: LabaratoryWork/Part1/Topic3/ex05(laba6)/dynamic_list.cpp.o
 
@@ -176,7 +149,7 @@ LabaratoryWork/Part1/Topic3/ex05(laba6)/dynamic_list.o: LabaratoryWork/Part1/Top
 
 # target to build an object file
 LabaratoryWork/Part1/Topic3/ex05(laba6)/dynamic_list.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/laba5.dir/build.make "CMakeFiles/laba5.dir/LabaratoryWork/Part1/Topic3/ex05(laba6)/dynamic_list.cpp.o"
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laba6.dir/build.make "CMakeFiles/laba6.dir/LabaratoryWork/Part1/Topic3/ex05(laba6)/dynamic_list.cpp.o"
 .PHONY : LabaratoryWork/Part1/Topic3/ex05(laba6)/dynamic_list.cpp.o
 
 LabaratoryWork/Part1/Topic3/ex05(laba6)/dynamic_list.i: LabaratoryWork/Part1/Topic3/ex05(laba6)/dynamic_list.cpp.i
@@ -185,7 +158,7 @@ LabaratoryWork/Part1/Topic3/ex05(laba6)/dynamic_list.i: LabaratoryWork/Part1/Top
 
 # target to preprocess a source file
 LabaratoryWork/Part1/Topic3/ex05(laba6)/dynamic_list.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/laba5.dir/build.make "CMakeFiles/laba5.dir/LabaratoryWork/Part1/Topic3/ex05(laba6)/dynamic_list.cpp.i"
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laba6.dir/build.make "CMakeFiles/laba6.dir/LabaratoryWork/Part1/Topic3/ex05(laba6)/dynamic_list.cpp.i"
 .PHONY : LabaratoryWork/Part1/Topic3/ex05(laba6)/dynamic_list.cpp.i
 
 LabaratoryWork/Part1/Topic3/ex05(laba6)/dynamic_list.s: LabaratoryWork/Part1/Topic3/ex05(laba6)/dynamic_list.cpp.s
@@ -194,8 +167,35 @@ LabaratoryWork/Part1/Topic3/ex05(laba6)/dynamic_list.s: LabaratoryWork/Part1/Top
 
 # target to generate assembly for a file
 LabaratoryWork/Part1/Topic3/ex05(laba6)/dynamic_list.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/laba5.dir/build.make "CMakeFiles/laba5.dir/LabaratoryWork/Part1/Topic3/ex05(laba6)/dynamic_list.cpp.s"
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laba6.dir/build.make "CMakeFiles/laba6.dir/LabaratoryWork/Part1/Topic3/ex05(laba6)/dynamic_list.cpp.s"
 .PHONY : LabaratoryWork/Part1/Topic3/ex05(laba6)/dynamic_list.cpp.s
+
+LabaratoryWork/Part1/Topic3/ex05(laba6)/main.o: LabaratoryWork/Part1/Topic3/ex05(laba6)/main.cpp.o
+
+.PHONY : LabaratoryWork/Part1/Topic3/ex05(laba6)/main.o
+
+# target to build an object file
+LabaratoryWork/Part1/Topic3/ex05(laba6)/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laba6.dir/build.make "CMakeFiles/laba6.dir/LabaratoryWork/Part1/Topic3/ex05(laba6)/main.cpp.o"
+.PHONY : LabaratoryWork/Part1/Topic3/ex05(laba6)/main.cpp.o
+
+LabaratoryWork/Part1/Topic3/ex05(laba6)/main.i: LabaratoryWork/Part1/Topic3/ex05(laba6)/main.cpp.i
+
+.PHONY : LabaratoryWork/Part1/Topic3/ex05(laba6)/main.i
+
+# target to preprocess a source file
+LabaratoryWork/Part1/Topic3/ex05(laba6)/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laba6.dir/build.make "CMakeFiles/laba6.dir/LabaratoryWork/Part1/Topic3/ex05(laba6)/main.cpp.i"
+.PHONY : LabaratoryWork/Part1/Topic3/ex05(laba6)/main.cpp.i
+
+LabaratoryWork/Part1/Topic3/ex05(laba6)/main.s: LabaratoryWork/Part1/Topic3/ex05(laba6)/main.cpp.s
+
+.PHONY : LabaratoryWork/Part1/Topic3/ex05(laba6)/main.s
+
+# target to generate assembly for a file
+LabaratoryWork/Part1/Topic3/ex05(laba6)/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laba6.dir/build.make "CMakeFiles/laba6.dir/LabaratoryWork/Part1/Topic3/ex05(laba6)/main.cpp.s"
+.PHONY : LabaratoryWork/Part1/Topic3/ex05(laba6)/main.cpp.s
 
 # Help Target
 help:
@@ -205,13 +205,13 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... laba5"
-	@echo "... LabaratoryWork/Part1/Topic3/ex03(laba5)/list.o"
-	@echo "... LabaratoryWork/Part1/Topic3/ex03(laba5)/list.i"
-	@echo "... LabaratoryWork/Part1/Topic3/ex03(laba5)/list.s"
+	@echo "... laba6"
 	@echo "... LabaratoryWork/Part1/Topic3/ex05(laba6)/dynamic_list.o"
 	@echo "... LabaratoryWork/Part1/Topic3/ex05(laba6)/dynamic_list.i"
 	@echo "... LabaratoryWork/Part1/Topic3/ex05(laba6)/dynamic_list.s"
+	@echo "... LabaratoryWork/Part1/Topic3/ex05(laba6)/main.o"
+	@echo "... LabaratoryWork/Part1/Topic3/ex05(laba6)/main.i"
+	@echo "... LabaratoryWork/Part1/Topic3/ex05(laba6)/main.s"
 .PHONY : help
 
 

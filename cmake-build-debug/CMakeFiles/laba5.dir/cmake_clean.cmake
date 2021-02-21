@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/laba5.dir/LabaratoryWork/Part1/Topic3/ex03(laba5)/list.cpp.o"
-  "CMakeFiles/laba5.dir/LabaratoryWork/Part1/Topic3/ex05(laba6)/dynamic_list.cpp.o"
+  "CMakeFiles/laba5.dir/LabaratoryWork/Part1/Topic3/ex03(laba5)/main.cpp.o"
   "laba5"
   "laba5.pdb"
 )

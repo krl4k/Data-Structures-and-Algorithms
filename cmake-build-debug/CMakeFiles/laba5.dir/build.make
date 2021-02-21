@@ -54,19 +54,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /snap/clion/139/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
+RM = /snap/clion/139/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms
+CMAKE_SOURCE_DIR = /home/kirill/Документы/4семестр/algorithms_and_data_structures/labs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms/cmake-build-debug
+CMAKE_BINARY_DIR = /home/kirill/Документы/4семестр/algorithms_and_data_structures/labs/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/laba5.dir/depend.make
@@ -79,43 +79,43 @@ include CMakeFiles/laba5.dir/flags.make
 
 CMakeFiles/laba5.dir/LabaratoryWork/Part1/Topic3/ex03(laba5)/list.cpp.o: CMakeFiles/laba5.dir/flags.make
 CMakeFiles/laba5.dir/LabaratoryWork/Part1/Topic3/ex03(laba5)/list.cpp.o: ../LabaratoryWork/Part1/Topic3/ex03(laba5)/list.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/laba5.dir/LabaratoryWork/Part1/Topic3/ex03(laba5)/list.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o "CMakeFiles/laba5.dir/LabaratoryWork/Part1/Topic3/ex03(laba5)/list.cpp.o" -c "/Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms/LabaratoryWork/Part1/Topic3/ex03(laba5)/list.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kirill/Документы/4семестр/algorithms_and_data_structures/labs/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/laba5.dir/LabaratoryWork/Part1/Topic3/ex03(laba5)/list.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o "CMakeFiles/laba5.dir/LabaratoryWork/Part1/Topic3/ex03(laba5)/list.cpp.o" -c "/home/kirill/Документы/4семестр/algorithms_and_data_structures/labs/LabaratoryWork/Part1/Topic3/ex03(laba5)/list.cpp"
 
 CMakeFiles/laba5.dir/LabaratoryWork/Part1/Topic3/ex03(laba5)/list.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/laba5.dir/LabaratoryWork/Part1/Topic3/ex03(laba5)/list.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms/LabaratoryWork/Part1/Topic3/ex03(laba5)/list.cpp" > "CMakeFiles/laba5.dir/LabaratoryWork/Part1/Topic3/ex03(laba5)/list.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/kirill/Документы/4семестр/algorithms_and_data_structures/labs/LabaratoryWork/Part1/Topic3/ex03(laba5)/list.cpp" > "CMakeFiles/laba5.dir/LabaratoryWork/Part1/Topic3/ex03(laba5)/list.cpp.i"
 
 CMakeFiles/laba5.dir/LabaratoryWork/Part1/Topic3/ex03(laba5)/list.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/laba5.dir/LabaratoryWork/Part1/Topic3/ex03(laba5)/list.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms/LabaratoryWork/Part1/Topic3/ex03(laba5)/list.cpp" -o "CMakeFiles/laba5.dir/LabaratoryWork/Part1/Topic3/ex03(laba5)/list.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/kirill/Документы/4семестр/algorithms_and_data_structures/labs/LabaratoryWork/Part1/Topic3/ex03(laba5)/list.cpp" -o "CMakeFiles/laba5.dir/LabaratoryWork/Part1/Topic3/ex03(laba5)/list.cpp.s"
 
-CMakeFiles/laba5.dir/LabaratoryWork/Part1/Topic3/ex05(laba6)/dynamic_list.cpp.o: CMakeFiles/laba5.dir/flags.make
-CMakeFiles/laba5.dir/LabaratoryWork/Part1/Topic3/ex05(laba6)/dynamic_list.cpp.o: ../LabaratoryWork/Part1/Topic3/ex05(laba6)/dynamic_list.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/laba5.dir/LabaratoryWork/Part1/Topic3/ex05(laba6)/dynamic_list.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o "CMakeFiles/laba5.dir/LabaratoryWork/Part1/Topic3/ex05(laba6)/dynamic_list.cpp.o" -c "/Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms/LabaratoryWork/Part1/Topic3/ex05(laba6)/dynamic_list.cpp"
+CMakeFiles/laba5.dir/LabaratoryWork/Part1/Topic3/ex03(laba5)/main.cpp.o: CMakeFiles/laba5.dir/flags.make
+CMakeFiles/laba5.dir/LabaratoryWork/Part1/Topic3/ex03(laba5)/main.cpp.o: ../LabaratoryWork/Part1/Topic3/ex03(laba5)/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kirill/Документы/4семестр/algorithms_and_data_structures/labs/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/laba5.dir/LabaratoryWork/Part1/Topic3/ex03(laba5)/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o "CMakeFiles/laba5.dir/LabaratoryWork/Part1/Topic3/ex03(laba5)/main.cpp.o" -c "/home/kirill/Документы/4семестр/algorithms_and_data_structures/labs/LabaratoryWork/Part1/Topic3/ex03(laba5)/main.cpp"
 
-CMakeFiles/laba5.dir/LabaratoryWork/Part1/Topic3/ex05(laba6)/dynamic_list.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/laba5.dir/LabaratoryWork/Part1/Topic3/ex05(laba6)/dynamic_list.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms/LabaratoryWork/Part1/Topic3/ex05(laba6)/dynamic_list.cpp" > "CMakeFiles/laba5.dir/LabaratoryWork/Part1/Topic3/ex05(laba6)/dynamic_list.cpp.i"
+CMakeFiles/laba5.dir/LabaratoryWork/Part1/Topic3/ex03(laba5)/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/laba5.dir/LabaratoryWork/Part1/Topic3/ex03(laba5)/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/kirill/Документы/4семестр/algorithms_and_data_structures/labs/LabaratoryWork/Part1/Topic3/ex03(laba5)/main.cpp" > "CMakeFiles/laba5.dir/LabaratoryWork/Part1/Topic3/ex03(laba5)/main.cpp.i"
 
-CMakeFiles/laba5.dir/LabaratoryWork/Part1/Topic3/ex05(laba6)/dynamic_list.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/laba5.dir/LabaratoryWork/Part1/Topic3/ex05(laba6)/dynamic_list.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms/LabaratoryWork/Part1/Topic3/ex05(laba6)/dynamic_list.cpp" -o "CMakeFiles/laba5.dir/LabaratoryWork/Part1/Topic3/ex05(laba6)/dynamic_list.cpp.s"
+CMakeFiles/laba5.dir/LabaratoryWork/Part1/Topic3/ex03(laba5)/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/laba5.dir/LabaratoryWork/Part1/Topic3/ex03(laba5)/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/kirill/Документы/4семестр/algorithms_and_data_structures/labs/LabaratoryWork/Part1/Topic3/ex03(laba5)/main.cpp" -o "CMakeFiles/laba5.dir/LabaratoryWork/Part1/Topic3/ex03(laba5)/main.cpp.s"
 
 # Object files for target laba5
 laba5_OBJECTS = \
 "CMakeFiles/laba5.dir/LabaratoryWork/Part1/Topic3/ex03(laba5)/list.cpp.o" \
-"CMakeFiles/laba5.dir/LabaratoryWork/Part1/Topic3/ex05(laba6)/dynamic_list.cpp.o"
+"CMakeFiles/laba5.dir/LabaratoryWork/Part1/Topic3/ex03(laba5)/main.cpp.o"
 
 # External object files for target laba5
 laba5_EXTERNAL_OBJECTS =
 
 laba5: CMakeFiles/laba5.dir/LabaratoryWork/Part1/Topic3/ex03(laba5)/list.cpp.o
-laba5: CMakeFiles/laba5.dir/LabaratoryWork/Part1/Topic3/ex05(laba6)/dynamic_list.cpp.o
+laba5: CMakeFiles/laba5.dir/LabaratoryWork/Part1/Topic3/ex03(laba5)/main.cpp.o
 laba5: CMakeFiles/laba5.dir/build.make
 laba5: CMakeFiles/laba5.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable laba5"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kirill/Документы/4семестр/algorithms_and_data_structures/labs/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable laba5"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/laba5.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -128,6 +128,6 @@ CMakeFiles/laba5.dir/clean:
 .PHONY : CMakeFiles/laba5.dir/clean
 
 CMakeFiles/laba5.dir/depend:
-	cd /Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms /Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms /Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms/cmake-build-debug /Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms/cmake-build-debug /Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms/cmake-build-debug/CMakeFiles/laba5.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kirill/Документы/4семестр/algorithms_and_data_structures/labs/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kirill/Документы/4семестр/algorithms_and_data_structures/labs /home/kirill/Документы/4семестр/algorithms_and_data_structures/labs /home/kirill/Документы/4семестр/algorithms_and_data_structures/labs/cmake-build-debug /home/kirill/Документы/4семестр/algorithms_and_data_structures/labs/cmake-build-debug /home/kirill/Документы/4семестр/algorithms_and_data_structures/labs/cmake-build-debug/CMakeFiles/laba5.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/laba5.dir/depend
 

@@ -91,9 +91,7 @@ void push_random(t_stack **stack, int count_elem)
 void moving_tops(t_stack **stack1, t_stack **stack2)
 {
 	if (!*stack1)
-	{
 		return;
-	}
 	if (!*stack2)
 		init(stack2);
 	if (!(*stack1)->top)

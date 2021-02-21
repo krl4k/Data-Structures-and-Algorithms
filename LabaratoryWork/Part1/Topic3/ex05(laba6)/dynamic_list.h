@@ -1,6 +1,7 @@
 #ifndef DYNAMIC_LIST_H
 #define DYNAMIC_LIST_H
-#include "iostream"
+#include <iostream>
+#include <cstring>
 typedef struct s_node
 {
 	char *data;
@@ -32,13 +33,16 @@ void			push_after(t_list *list, const char *elem, t_node *new_node);
 void			push_front(t_list *list, t_node *new_node);
 void			push_back(t_list *list, t_node *new_node);
 
-void			clear(t_list **lst);
+void			clear(t_list **list);
 void            list_print(t_list *lst);
 
 void            pop_elem(t_list	*list, const char *elem);
 void            pop_back(t_list *list);
 void            pop_front(t_list	*list);
+int				get_index(t_list *list, const char *elem);
 
 
+void			pop_back_to_stack(t_list *list, t_list *stack);
+void			pop_front_to_stack(t_list *list, t_list *stack);
 
 #endif

@@ -55,25 +55,25 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /snap/clion/139/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
+RM = /snap/clion/139/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms
+CMAKE_SOURCE_DIR = /home/kirill/Документы/4семестр/algorithms_and_data_structures/labs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms/cmake-build-debug
+CMAKE_BINARY_DIR = /home/kirill/Документы/4семестр/algorithms_and_data_structures/labs/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/laba5.dir/all
+all: CMakeFiles/laba6.dir/all
 
 .PHONY : all
 
@@ -83,36 +83,36 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/laba5.dir/clean
+clean: CMakeFiles/laba6.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/laba5.dir
+# Target rules for target CMakeFiles/laba6.dir
 
 # All Build rule for target.
-CMakeFiles/laba5.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/laba5.dir/build.make CMakeFiles/laba5.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/laba5.dir/build.make CMakeFiles/laba5.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target laba5"
-.PHONY : CMakeFiles/laba5.dir/all
+CMakeFiles/laba6.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laba6.dir/build.make CMakeFiles/laba6.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laba6.dir/build.make CMakeFiles/laba6.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kirill/Документы/4семестр/algorithms_and_data_structures/labs/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target laba6"
+.PHONY : CMakeFiles/laba6.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/laba5.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms/cmake-build-debug/CMakeFiles 3
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/laba5.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/laba5.dir/rule
+CMakeFiles/laba6.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kirill/Документы/4семестр/algorithms_and_data_structures/labs/cmake-build-debug/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/laba6.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kirill/Документы/4семестр/algorithms_and_data_structures/labs/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/laba6.dir/rule
 
 # Convenience name for target.
-laba5: CMakeFiles/laba5.dir/rule
+laba6: CMakeFiles/laba6.dir/rule
 
-.PHONY : laba5
+.PHONY : laba6
 
 # clean rule for target.
-CMakeFiles/laba5.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/laba5.dir/build.make CMakeFiles/laba5.dir/clean
-.PHONY : CMakeFiles/laba5.dir/clean
+CMakeFiles/laba6.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laba6.dir/build.make CMakeFiles/laba6.dir/clean
+.PHONY : CMakeFiles/laba6.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

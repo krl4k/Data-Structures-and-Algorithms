@@ -256,6 +256,7 @@ int		get_index(t_static_list *list, int data)
 	int i = 0;
 	while (i < list->size)
 	{
+		printf("list %d = %d\n", i, list->list[i]);
 		if (list->list[i] == data)
 			return (i);
 		i++;

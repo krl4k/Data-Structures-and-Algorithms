@@ -2,8 +2,12 @@
 #define ARRAY_LIST_H
 #include <iostream>
 #include <cstring>
+
+//if degub == 1 -> active main in static_list.cpp
 #define  DEBUG 2
 
+
+//if INT == 1 work with int value, else work with strings
 #ifndef INT
 #define INT 1
 #endif

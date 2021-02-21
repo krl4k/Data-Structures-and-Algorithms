@@ -4,10 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms/LabaratoryWork/Part1/Topic3/ex03(laba5)/list.cpp" "/Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms/cmake-build-debug/CMakeFiles/laba5.dir/LabaratoryWork/Part1/Topic3/ex03(laba5)/list.cpp.o"
-  "/Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms/LabaratoryWork/Part1/Topic3/ex05(laba6)/dynamic_list.cpp" "/Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms/cmake-build-debug/CMakeFiles/laba5.dir/LabaratoryWork/Part1/Topic3/ex05(laba6)/dynamic_list.cpp.o"
+  "/home/kirill/Документы/4семестр/algorithms_and_data_structures/labs/LabaratoryWork/Part1/Topic3/ex03(laba5)/list.cpp" "/home/kirill/Документы/4семестр/algorithms_and_data_structures/labs/cmake-build-debug/CMakeFiles/laba5.dir/LabaratoryWork/Part1/Topic3/ex03(laba5)/list.cpp.o"
+  "/home/kirill/Документы/4семестр/algorithms_and_data_structures/labs/LabaratoryWork/Part1/Topic3/ex03(laba5)/main.cpp" "/home/kirill/Документы/4семестр/algorithms_and_data_structures/labs/cmake-build-debug/CMakeFiles/laba5.dir/LabaratoryWork/Part1/Topic3/ex03(laba5)/main.cpp.o"
   )
-set(CMAKE_CXX_COMPILER_ID "AppleClang")
+set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH

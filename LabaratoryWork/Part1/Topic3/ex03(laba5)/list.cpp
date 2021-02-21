@@ -130,6 +130,11 @@ void	push_before(t_list *list, std::string elem, std::string data)
 		std::cout << "List is full!" << std::endl;
 		return;
 	}
+	if (is_empty(list))
+	{
+		std::cout << "Elem not found!" << std::endl;
+		return;
+	}
 	int i = 1;
 	int temp = list->node[0].next;
 	int before_new;
@@ -165,6 +170,11 @@ void	push_after(t_list *list, std::string elem, std::string data)
 		std::cout << "List is full!" << std::endl;
 		return;
 	}
+	if (is_empty(list))
+	{
+		std::cout << "Elem not found!" << std::endl;
+		return;
+	}
 	int i = 1;
 	int temp = list->node[0].next;
 	while(temp != -1)
@@ -179,11 +189,6 @@ void	push_after(t_list *list, std::string elem, std::string data)
 		std::cout << "Elem not in list!" << std::endl;
 		return;
 	}
-//	if (i == list->size - 1)
-//	{
-//		push_back(list, data);
-//		return;
-//	}
 	int new_node = find_empty_node(list, find_empty_index(list));
 	list->node[new_node].data = data;
 	list->node[new_node].next = list->node[temp].next;
@@ -254,7 +259,7 @@ void pop_back(t_list *list)
 		i++;
 	}
 	if (i == 1)
-		list->node[0].next = -1;
+		list->node[temp].next = -1;
 	else
 		list->node[temp].next = -1;
 	list->size--;
@@ -269,13 +274,32 @@ void print_list(t_list *list)
 	int i = 1;
 	int temp;
 	temp = list->node[0].next;
-	while ( temp != -1)
+	while (temp != -1)
 	{
 		std::cout << list->node[temp].data << "  ";
 		temp = list->node[temp].next;
 	}
 	std::cout << "\n--------------------------" << std::endl;
 }
+
+int get_index(t_list *list, std::string elem)
+{
+	int i = 1;
+	int temp;
+	temp = list->node[0].next;
+	while (temp != -1)
+	{
+		if (list->node[temp].data == elem)
+			return (i);
+		temp = list->node[temp].next;
+		i++;
+	}
+	return (-1);
+}
+
+
+
+/*
 
 int main()
 {
@@ -291,8 +315,13 @@ int main()
 
 	print_list(list);
 
-	pop_elem(list, "123");
+	for (int i = 0; i < 1; ++i)
+	{
+		pop_back(list);
+	}
 	print_list(list);
+	return 0;
+	pop_elem(list, "123");
 
 	int temp = list->node[0].next;
 	int i = 1;
@@ -314,3 +343,4 @@ int main()
 
 //	print_list(list);
 }
+*/
