@@ -4,26 +4,45 @@ void init(t_list *&list)
 {
 	list = new t_list;
 	list->head = new t_node;
+	list->head->data = nullptr;
 	list->head->next = nullptr;
 	list->size = 0;
 }
 
-void			clear(t_list **list)
+bool is_empty(t_list *list)
 {
-	if (!(*list) || !(*list)->head)
+	if (!list || !list->head)
+		return true;
+	if (list->head->next)
+		return true;
+	return false;
+}
+
+int				size(t_list *list)
+{
+	if (!list || !list->head)
+		return -1;
+	return (list->size);
+}
+
+void			clear(t_list *&list)
+{
+	if (!(list) || !(list)->head)
 		return;
-	t_node *temp = (*list)->head;
-	t_node *next;
+	t_node *temp = (list)->head;
+	t_node *next = nullptr;
 	while (temp)
 	{
 		next = temp->next;
-		free(temp->data);
-		temp->data = nullptr;
-		free(temp);
+		if (temp->data)
+			free(temp->data);
+//		temp->data = nullptr;
+		delete temp;
 		temp = next;
 	}
-	free(*list);
-	(*list) = nullptr;
+	list->size = 0;
+	delete list;
+	list = nullptr;
 }
 
 t_node *new_node(const char *data)
@@ -289,6 +308,37 @@ void			pop_front_to_stack(t_list *list, t_list *stack)
 	if (!moving_elem)
 		return;
 	list->head->next = after_moving;
+	if (!stack->head->next)
+		stack->head->next = moving_elem;
+	else
+	{
+		t_node *temp = stack->head->next;
+		stack->head->next = moving_elem;
+		moving_elem->next = temp;
+	}
+	stack->size++;
+	list->size--;
+}
+
+
+
+void			pop_elem_to_stack(t_list *list, t_list *stack, const char *data)
+{
+	if (!list || !stack || !list->head || !stack->head)
+		return;
+	t_node *moving_elem = list->head->next;
+	t_node *before_moving = list->head;
+	if (!moving_elem)
+		return;
+	while (moving_elem->next)
+	{
+		if (strcmp(moving_elem->data, data) == 0)
+			break;
+		before_moving = moving_elem;
+		moving_elem = moving_elem->next;
+	}
+	before_moving->next = moving_elem->next;
+	moving_elem->next = nullptr;
 	if (!stack->head->next)
 		stack->head->next = moving_elem;
 	else

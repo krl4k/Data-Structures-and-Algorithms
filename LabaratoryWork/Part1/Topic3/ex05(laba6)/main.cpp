@@ -146,6 +146,7 @@ void pop_to_stack(t_list *list, t_list *stack)
 	if (!list || !stack || !list->head || !stack->head)
 		return;
 	int op = pop_menu();
+	std::string s1;
 	while (1)
 	{
 		switch (op)
@@ -157,6 +158,9 @@ void pop_to_stack(t_list *list, t_list *stack)
 				pop_front_to_stack(list, stack);
 				return;
 			case 3:
+				std::cout << "Enter the element to pop: ";
+				std::cin >> s1;
+				pop_elem_to_stack(list, stack, s1.c_str());
 				return;
 			default:
 				std::cout << "Try again!" << std::endl;
@@ -187,13 +191,16 @@ int main(void)
 				break;
 			case 2:
 				pop_to_stack(list, stack);
-//				pop(list);
 				break;
 			case 3:
+				std::cout << "--------List-info---------------"<< std::endl;
 				list_print(list);
+				std::cout << "--------------------------------"<< std::endl;
 				break;
 			case 4:
+				std::cout << "---------Stack-info-------------"<< std::endl;
 				list_print(stack);
+				std::cout << "--------------------------------"<< std::endl;
 				break;
 			case 5:
 				std::cout << "Enter an element for find its index : " << std::endl;
@@ -204,8 +211,8 @@ int main(void)
 					std::cout << "Elem not found!" << std::endl;
 				break;
 			case 6:
-				clear(&list);
-				clear(&stack);
+				clear(list);
+				clear(stack);
 				std::cout << "Clear List!" << std::endl;
 				return (0);
 			default:
