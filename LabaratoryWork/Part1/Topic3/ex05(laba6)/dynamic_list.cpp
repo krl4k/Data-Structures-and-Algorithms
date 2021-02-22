@@ -135,9 +135,6 @@ void			push_before(t_list *list, const char *elem, t_node *new_node)
 {
 	if (list && list->head && new_node)
 	{
-//		if (list->head->next == nullptr)
-//			list->head->next = new_node;
-//		else
 		{
 			t_node *temp;
 			if (!(temp = find_before(list, elem)))

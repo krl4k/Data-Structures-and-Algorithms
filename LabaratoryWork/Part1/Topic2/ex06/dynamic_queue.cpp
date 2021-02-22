@@ -68,7 +68,7 @@ void push(t_queue *&queue, char data) {
     }
     if (0 == (size(queue))) {
         if ((queue)->back) {
-            printf("tut!\n");
+//            printf("tut!\n");
             (queue)->front = (queue)->back;
             (queue)->front->data = data;
             (queue)->size = 1;

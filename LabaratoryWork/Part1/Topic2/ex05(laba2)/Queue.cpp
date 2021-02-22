@@ -77,20 +77,10 @@ void printQueue(t_queue *queue)
 	}
 	std::cout << "Queue: ";
 	int i;
-//	for (i = front; i != rear; i = (i + 1) % SIZE)
-//	{
-//		printf("%d ", items[i]);
-//	}
 	for (i = queue->front; i != queue->end; i = (i + 1) % SIZE)
 	{
-//		std::cout << "print ";
 		std::cout << queue->queue[i] << ' ';
 	}
-	//	for (i = queue->end; i != queue->front; i = (i - 1) % SIZE)
-	//	{
-	//		std::cout << "print ";
-	//		std::cout << queue->queue[i] << ' ';
-	//	}
 	std::cout << queue->queue[i] << std::endl;
 }
 

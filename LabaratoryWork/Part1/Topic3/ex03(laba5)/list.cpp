@@ -91,8 +91,6 @@ void push_back(t_list *list, std::string string)
 	{
 		int last_node = find_empty_index(list);
 		int empty_node_index = find_empty_node(list, last_node);
-		//		printf("last node = %d\n", last_node);
-		//		printf("emp node index = %d\n", empty_node_index);
 		list->node[last_node].next = empty_node_index;
 		list->node[empty_node_index].data = string;
 		list->node[empty_node_index].next = -1;

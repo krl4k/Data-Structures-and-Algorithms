@@ -262,17 +262,36 @@ int main(void)
 	char *num;
 	int n;
 	int index = 0;
-
+	char *s_num;
+	int i_num1;
 	while (1)
 	{
 		op_num = menu();
 		switch (op_num)
 		{
 			case (1):
-				push(list);
+				std::cout << "Enter the element to push: ";
+				if(!(s_num = get_s_number()))
+				{
+					std::cout << "Bad input" << std::endl;
+					break;
+				}
+				i_num1 = get_int_number(s_num);
+				free(s_num);
+				push_sort(list, i_num1);
+//				push(list);
 				break;
 			case 2:
-				pop(list);
+//				pop(list);
+				std::cout << "Enter the element to pop: ";
+				if(!(s_num = get_s_number()))
+				{
+					std::cout << "Bad input" << std::endl;
+					break;
+				}
+				i_num1 = get_int_number(s_num);
+				free(s_num);
+				pop_elem(list, i_num1);
 				break;
 			case 3:
 				print_static_list(list);
@@ -286,7 +305,7 @@ int main(void)
 				}
 				n = get_int_number(num);
 				free(num);
-				printf("n ===  %d\n",n);
+//				printf("n ===  %d\n",n);
 				if ((index = get_index(list, n)) != -1)
 					std::cout << "Elem " << n << " has index " << index << std::endl;
 				else

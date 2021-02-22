@@ -2,6 +2,7 @@
 #define DYNAMIC_LIST_H
 #include <iostream>
 #include <cstring>
+
 typedef struct s_node
 {
 	char *data;
@@ -13,7 +14,6 @@ typedef struct s_list
 	t_node *head;
 	int 	size;
 }			t_list;
-
 
 /*!
  *

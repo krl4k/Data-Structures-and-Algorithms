@@ -1,6 +1,3 @@
-//
-// Created by Foster Grisella on 2/16/21.
-//
 
 #ifndef TEST_LIST_H
 #define TEST_LIST_H
