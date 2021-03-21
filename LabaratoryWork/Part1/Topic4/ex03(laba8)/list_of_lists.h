@@ -40,7 +40,10 @@ t_node_list_of_lists					*new_list_of_lists();
 
 void			clear_list_of_lists(t_list_of_lists *&list);
 void			push_back_list_of_lists(t_list_of_lists *listOfLists);
+void			push_back_to_list(t_list_of_lists *listOfLists, int index, const std::string &data);
 void			pop_back_list_of_lists(t_list_of_lists *listOfLists);
+void			pop_back_in_list(t_list_of_lists *listOfLists, int index);
 void			printList_of_list(t_list_of_lists *listOfLists);
+t_node			*getElem_lists(t_list_of_lists *listOfLists, const std::string &elem);
 
 #endif //TEST_LIST_OF_LISTS_H

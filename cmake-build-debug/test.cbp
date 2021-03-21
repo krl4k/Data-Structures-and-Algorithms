@@ -37,8 +37,8 @@
 					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="laba7">
-				<Option output="/Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms/cmake-build-debug/laba7" prefix_auto="0" extension_auto="0"/>
+			<Target title="laba8">
+				<Option output="/Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms/cmake-build-debug/laba8" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -53,14 +53,14 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms/cmake-build-debug/Makefile&quot;  VERBOSE=1 laba7"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms/cmake-build-debug/Makefile&quot;  VERBOSE=1 laba8"/>
 					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j6 -f &quot;/Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="laba7/fast">
-				<Option output="/Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms/cmake-build-debug/laba7" prefix_auto="0" extension_auto="0"/>
+			<Target title="laba8/fast">
+				<Option output="/Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms/cmake-build-debug/laba8" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -75,21 +75,27 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms/cmake-build-debug/Makefile&quot;  VERBOSE=1 laba7/fast"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms/cmake-build-debug/Makefile&quot;  VERBOSE=1 laba8/fast"/>
 					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j6 -f &quot;/Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms/LabaratoryWork/Part1/Topic5/ex01(laba9)/B_tree.cpp">
-			<Option target="laba7"/>
+		<Unit filename="/Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms/LabaratoryWork/Part1/Topic4/ex03(laba8)/dynamic_list.cpp">
+			<Option target="laba8"/>
 		</Unit>
-		<Unit filename="/Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms/LabaratoryWork/Part1/Topic5/ex01(laba9)/B_tree.h">
-			<Option target="laba7"/>
+		<Unit filename="/Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms/LabaratoryWork/Part1/Topic4/ex03(laba8)/dynamic_list.h">
+			<Option target="laba8"/>
 		</Unit>
-		<Unit filename="/Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms/LabaratoryWork/Part1/Topic5/ex01(laba9)/main.cpp">
-			<Option target="laba7"/>
+		<Unit filename="/Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms/LabaratoryWork/Part1/Topic4/ex03(laba8)/list_of_lists.cpp">
+			<Option target="laba8"/>
+		</Unit>
+		<Unit filename="/Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms/LabaratoryWork/Part1/Topic4/ex03(laba8)/list_of_lists.h">
+			<Option target="laba8"/>
+		</Unit>
+		<Unit filename="/Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms/LabaratoryWork/Part1/Topic4/ex03(laba8)/main.cpp">
+			<Option target="laba8"/>
 		</Unit>
 		<Unit filename="/Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>

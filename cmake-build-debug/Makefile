@@ -131,71 +131,98 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named laba7
+# Target rules for targets named laba8
 
 # Build rule for target.
-laba7: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 laba7
-.PHONY : laba7
+laba8: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 laba8
+.PHONY : laba8
 
 # fast build rule for target.
-laba7/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/laba7.dir/build.make CMakeFiles/laba7.dir/build
-.PHONY : laba7/fast
+laba8/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laba8.dir/build.make CMakeFiles/laba8.dir/build
+.PHONY : laba8/fast
 
-LabaratoryWork/Part1/Topic5/ex01(laba9)/B_tree.o: LabaratoryWork/Part1/Topic5/ex01(laba9)/B_tree.cpp.o
+LabaratoryWork/Part1/Topic4/ex03(laba8)/dynamic_list.o: LabaratoryWork/Part1/Topic4/ex03(laba8)/dynamic_list.cpp.o
 
-.PHONY : LabaratoryWork/Part1/Topic5/ex01(laba9)/B_tree.o
-
-# target to build an object file
-LabaratoryWork/Part1/Topic5/ex01(laba9)/B_tree.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/laba7.dir/build.make "CMakeFiles/laba7.dir/LabaratoryWork/Part1/Topic5/ex01(laba9)/B_tree.cpp.o"
-.PHONY : LabaratoryWork/Part1/Topic5/ex01(laba9)/B_tree.cpp.o
-
-LabaratoryWork/Part1/Topic5/ex01(laba9)/B_tree.i: LabaratoryWork/Part1/Topic5/ex01(laba9)/B_tree.cpp.i
-
-.PHONY : LabaratoryWork/Part1/Topic5/ex01(laba9)/B_tree.i
-
-# target to preprocess a source file
-LabaratoryWork/Part1/Topic5/ex01(laba9)/B_tree.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/laba7.dir/build.make "CMakeFiles/laba7.dir/LabaratoryWork/Part1/Topic5/ex01(laba9)/B_tree.cpp.i"
-.PHONY : LabaratoryWork/Part1/Topic5/ex01(laba9)/B_tree.cpp.i
-
-LabaratoryWork/Part1/Topic5/ex01(laba9)/B_tree.s: LabaratoryWork/Part1/Topic5/ex01(laba9)/B_tree.cpp.s
-
-.PHONY : LabaratoryWork/Part1/Topic5/ex01(laba9)/B_tree.s
-
-# target to generate assembly for a file
-LabaratoryWork/Part1/Topic5/ex01(laba9)/B_tree.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/laba7.dir/build.make "CMakeFiles/laba7.dir/LabaratoryWork/Part1/Topic5/ex01(laba9)/B_tree.cpp.s"
-.PHONY : LabaratoryWork/Part1/Topic5/ex01(laba9)/B_tree.cpp.s
-
-LabaratoryWork/Part1/Topic5/ex01(laba9)/main.o: LabaratoryWork/Part1/Topic5/ex01(laba9)/main.cpp.o
-
-.PHONY : LabaratoryWork/Part1/Topic5/ex01(laba9)/main.o
+.PHONY : LabaratoryWork/Part1/Topic4/ex03(laba8)/dynamic_list.o
 
 # target to build an object file
-LabaratoryWork/Part1/Topic5/ex01(laba9)/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/laba7.dir/build.make "CMakeFiles/laba7.dir/LabaratoryWork/Part1/Topic5/ex01(laba9)/main.cpp.o"
-.PHONY : LabaratoryWork/Part1/Topic5/ex01(laba9)/main.cpp.o
+LabaratoryWork/Part1/Topic4/ex03(laba8)/dynamic_list.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laba8.dir/build.make "CMakeFiles/laba8.dir/LabaratoryWork/Part1/Topic4/ex03(laba8)/dynamic_list.cpp.o"
+.PHONY : LabaratoryWork/Part1/Topic4/ex03(laba8)/dynamic_list.cpp.o
 
-LabaratoryWork/Part1/Topic5/ex01(laba9)/main.i: LabaratoryWork/Part1/Topic5/ex01(laba9)/main.cpp.i
+LabaratoryWork/Part1/Topic4/ex03(laba8)/dynamic_list.i: LabaratoryWork/Part1/Topic4/ex03(laba8)/dynamic_list.cpp.i
 
-.PHONY : LabaratoryWork/Part1/Topic5/ex01(laba9)/main.i
+.PHONY : LabaratoryWork/Part1/Topic4/ex03(laba8)/dynamic_list.i
 
 # target to preprocess a source file
-LabaratoryWork/Part1/Topic5/ex01(laba9)/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/laba7.dir/build.make "CMakeFiles/laba7.dir/LabaratoryWork/Part1/Topic5/ex01(laba9)/main.cpp.i"
-.PHONY : LabaratoryWork/Part1/Topic5/ex01(laba9)/main.cpp.i
+LabaratoryWork/Part1/Topic4/ex03(laba8)/dynamic_list.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laba8.dir/build.make "CMakeFiles/laba8.dir/LabaratoryWork/Part1/Topic4/ex03(laba8)/dynamic_list.cpp.i"
+.PHONY : LabaratoryWork/Part1/Topic4/ex03(laba8)/dynamic_list.cpp.i
 
-LabaratoryWork/Part1/Topic5/ex01(laba9)/main.s: LabaratoryWork/Part1/Topic5/ex01(laba9)/main.cpp.s
+LabaratoryWork/Part1/Topic4/ex03(laba8)/dynamic_list.s: LabaratoryWork/Part1/Topic4/ex03(laba8)/dynamic_list.cpp.s
 
-.PHONY : LabaratoryWork/Part1/Topic5/ex01(laba9)/main.s
+.PHONY : LabaratoryWork/Part1/Topic4/ex03(laba8)/dynamic_list.s
 
 # target to generate assembly for a file
-LabaratoryWork/Part1/Topic5/ex01(laba9)/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/laba7.dir/build.make "CMakeFiles/laba7.dir/LabaratoryWork/Part1/Topic5/ex01(laba9)/main.cpp.s"
-.PHONY : LabaratoryWork/Part1/Topic5/ex01(laba9)/main.cpp.s
+LabaratoryWork/Part1/Topic4/ex03(laba8)/dynamic_list.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laba8.dir/build.make "CMakeFiles/laba8.dir/LabaratoryWork/Part1/Topic4/ex03(laba8)/dynamic_list.cpp.s"
+.PHONY : LabaratoryWork/Part1/Topic4/ex03(laba8)/dynamic_list.cpp.s
+
+LabaratoryWork/Part1/Topic4/ex03(laba8)/list_of_lists.o: LabaratoryWork/Part1/Topic4/ex03(laba8)/list_of_lists.cpp.o
+
+.PHONY : LabaratoryWork/Part1/Topic4/ex03(laba8)/list_of_lists.o
+
+# target to build an object file
+LabaratoryWork/Part1/Topic4/ex03(laba8)/list_of_lists.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laba8.dir/build.make "CMakeFiles/laba8.dir/LabaratoryWork/Part1/Topic4/ex03(laba8)/list_of_lists.cpp.o"
+.PHONY : LabaratoryWork/Part1/Topic4/ex03(laba8)/list_of_lists.cpp.o
+
+LabaratoryWork/Part1/Topic4/ex03(laba8)/list_of_lists.i: LabaratoryWork/Part1/Topic4/ex03(laba8)/list_of_lists.cpp.i
+
+.PHONY : LabaratoryWork/Part1/Topic4/ex03(laba8)/list_of_lists.i
+
+# target to preprocess a source file
+LabaratoryWork/Part1/Topic4/ex03(laba8)/list_of_lists.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laba8.dir/build.make "CMakeFiles/laba8.dir/LabaratoryWork/Part1/Topic4/ex03(laba8)/list_of_lists.cpp.i"
+.PHONY : LabaratoryWork/Part1/Topic4/ex03(laba8)/list_of_lists.cpp.i
+
+LabaratoryWork/Part1/Topic4/ex03(laba8)/list_of_lists.s: LabaratoryWork/Part1/Topic4/ex03(laba8)/list_of_lists.cpp.s
+
+.PHONY : LabaratoryWork/Part1/Topic4/ex03(laba8)/list_of_lists.s
+
+# target to generate assembly for a file
+LabaratoryWork/Part1/Topic4/ex03(laba8)/list_of_lists.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laba8.dir/build.make "CMakeFiles/laba8.dir/LabaratoryWork/Part1/Topic4/ex03(laba8)/list_of_lists.cpp.s"
+.PHONY : LabaratoryWork/Part1/Topic4/ex03(laba8)/list_of_lists.cpp.s
+
+LabaratoryWork/Part1/Topic4/ex03(laba8)/main.o: LabaratoryWork/Part1/Topic4/ex03(laba8)/main.cpp.o
+
+.PHONY : LabaratoryWork/Part1/Topic4/ex03(laba8)/main.o
+
+# target to build an object file
+LabaratoryWork/Part1/Topic4/ex03(laba8)/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laba8.dir/build.make "CMakeFiles/laba8.dir/LabaratoryWork/Part1/Topic4/ex03(laba8)/main.cpp.o"
+.PHONY : LabaratoryWork/Part1/Topic4/ex03(laba8)/main.cpp.o
+
+LabaratoryWork/Part1/Topic4/ex03(laba8)/main.i: LabaratoryWork/Part1/Topic4/ex03(laba8)/main.cpp.i
+
+.PHONY : LabaratoryWork/Part1/Topic4/ex03(laba8)/main.i
+
+# target to preprocess a source file
+LabaratoryWork/Part1/Topic4/ex03(laba8)/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laba8.dir/build.make "CMakeFiles/laba8.dir/LabaratoryWork/Part1/Topic4/ex03(laba8)/main.cpp.i"
+.PHONY : LabaratoryWork/Part1/Topic4/ex03(laba8)/main.cpp.i
+
+LabaratoryWork/Part1/Topic4/ex03(laba8)/main.s: LabaratoryWork/Part1/Topic4/ex03(laba8)/main.cpp.s
+
+.PHONY : LabaratoryWork/Part1/Topic4/ex03(laba8)/main.s
+
+# target to generate assembly for a file
+LabaratoryWork/Part1/Topic4/ex03(laba8)/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laba8.dir/build.make "CMakeFiles/laba8.dir/LabaratoryWork/Part1/Topic4/ex03(laba8)/main.cpp.s"
+.PHONY : LabaratoryWork/Part1/Topic4/ex03(laba8)/main.cpp.s
 
 # Help Target
 help:
@@ -205,13 +232,16 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... laba7"
-	@echo "... LabaratoryWork/Part1/Topic5/ex01(laba9)/B_tree.o"
-	@echo "... LabaratoryWork/Part1/Topic5/ex01(laba9)/B_tree.i"
-	@echo "... LabaratoryWork/Part1/Topic5/ex01(laba9)/B_tree.s"
-	@echo "... LabaratoryWork/Part1/Topic5/ex01(laba9)/main.o"
-	@echo "... LabaratoryWork/Part1/Topic5/ex01(laba9)/main.i"
-	@echo "... LabaratoryWork/Part1/Topic5/ex01(laba9)/main.s"
+	@echo "... laba8"
+	@echo "... LabaratoryWork/Part1/Topic4/ex03(laba8)/dynamic_list.o"
+	@echo "... LabaratoryWork/Part1/Topic4/ex03(laba8)/dynamic_list.i"
+	@echo "... LabaratoryWork/Part1/Topic4/ex03(laba8)/dynamic_list.s"
+	@echo "... LabaratoryWork/Part1/Topic4/ex03(laba8)/list_of_lists.o"
+	@echo "... LabaratoryWork/Part1/Topic4/ex03(laba8)/list_of_lists.i"
+	@echo "... LabaratoryWork/Part1/Topic4/ex03(laba8)/list_of_lists.s"
+	@echo "... LabaratoryWork/Part1/Topic4/ex03(laba8)/main.o"
+	@echo "... LabaratoryWork/Part1/Topic4/ex03(laba8)/main.i"
+	@echo "... LabaratoryWork/Part1/Topic4/ex03(laba8)/main.s"
 .PHONY : help
 
 

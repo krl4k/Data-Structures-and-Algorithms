@@ -113,8 +113,62 @@ void			printList_of_list(t_list_of_lists *listOfLists)
 	t_node_list_of_lists *temp = listOfLists->lists_head;
 	while (temp)
 	{
-		std::cout << "index = " << temp->index << std::endl;
+		std::cout << "index = " << temp->index<< std::endl;
 		list_print(temp->head);
+		std::cout << "----------------------------------------------------" << std::endl;
 		temp = temp->next;
 	}
+}
+
+void			push_back_to_list(t_list_of_lists *listOfLists, int index, const std::string &data)
+{
+	if (!listOfLists || !listOfLists->lists_head || index > listOfLists->size - 1)
+		return;
+
+	int i = 0;
+	t_node_list_of_lists *temp = listOfLists->lists_head;
+	while (temp && i < index)
+	{
+		temp = temp->next;
+		i++;
+	}
+	push_back(temp->head, new_node(data.c_str()));
+}
+
+void			pop_back_in_list(t_list_of_lists *listOfLists, int index)
+{
+	if (!listOfLists || !listOfLists->lists_head || index > listOfLists->size - 1)
+		return;
+	int i;
+	t_node_list_of_lists *temp = listOfLists->lists_head;
+	while (temp && i < index)
+	{
+		temp = temp->next;
+		i++;
+	}
+	pop_back(temp->head);
+}
+
+t_node *getElem_lists(t_list_of_lists *listOfLists, const std::string &elem)
+{
+	t_node_list_of_lists *temp = listOfLists->lists_head;
+	t_node *temp_node;
+	while (temp)
+	{
+		temp_node = temp->head->head->next;
+		if (temp_node)
+		{
+			while (temp_node)
+			{
+				if (temp_node->data)
+				{
+					if (std::strcmp(temp_node->data ,elem.c_str()) == 0)
+						return temp_node;
+				}
+				temp_node = temp_node->next;
+			}
+		}
+		temp = temp->next;
+	}
+	return nullptr;
 }

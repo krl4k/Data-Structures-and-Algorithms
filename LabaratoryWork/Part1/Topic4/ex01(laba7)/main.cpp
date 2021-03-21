@@ -4,57 +4,6 @@
 
 #include "bi_list.h"
 
-//int main()
-//{
-//	std::string string[10] = {"1", "2", "3", "4", "5", "6", "7", "8", "9"};
-//	t_dbllist *list;
-//	init(list);
-//
-//	for (int i = 0; i < 5; ++i)
-//	{
-//		getline(std::cin,temp);
-//		push_back(list, string[i]);
-//	}
-
-//	t_node  *temp = list->tail;
-//	for (int i = 0; i < 15; ++i) {
-//		std::cout << temp->data << " ";
-//		temp = iterator_list(temp);
-//	}
-//	std::cout << std::endl;
-
-//	printlist(list->head, iterator_list, list->size);
-//	printlist(list->tail, reverse_iterator_list, list->size);
-
-//	printList(list);
-
-//	deleteAt(list, 4);
-//	deleteElem(list, "9");
-//	insert(list, 9, "00");
-//	printList(list);
-//	printReverseList(list);
-//
-//}
-
-//
-////int main()
-////{
-////	t_dbllist *list;
-////	init(list);
-////
-////	for (int i = 0; i < 10; ++i)
-////		push_back(list, i);
-////
-////	printList(list);
-////
-////	insert(list, 1, 100);
-////	pop_back(list);
-////	pop_front(list);
-////
-////	printList(list);
-////	return (0);
-////}
-
 int is_valid_input(const char *s)
 {
 	int i;
