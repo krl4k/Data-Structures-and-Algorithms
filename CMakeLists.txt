@@ -49,7 +49,14 @@ link_directories(
 #        )
 
 
-add_executable(laba6
-        LabaratoryWork/Part1/Topic3/ex05\(laba6\)/dynamic_list.cpp
-        LabaratoryWork/Part1/Topic3/ex05\(laba6\)/main.cpp
+#add_executable(laba6
+#        LabaratoryWork/Part1/Topic3/ex05\(laba6\)/dynamic_list.cpp
+#        LabaratoryWork/Part1/Topic3/ex05\(laba6\)/main.cpp
+#        )
+
+
+
+add_executable(laba7
+        LabaratoryWork/Part1/Topic4/ex01\(laba7\)/bi_list.cpp
+#        LabaratoryWork/Part1/Topic4/ex01(laba7)/
         )
