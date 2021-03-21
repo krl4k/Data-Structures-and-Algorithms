@@ -7,11 +7,11 @@ typedef struct s_node
 {
 	char			*data;
 	struct s_node	*next;
-}				t_node;
+}				t_t_node;
 
 typedef struct s_list
 {
-	t_node *head;
+	t_t_node *head;
 	int 	size;
 }			t_list;
 
@@ -30,19 +30,19 @@ int				size(t_list *list);
  * @param temp
  * @return link last node in list
  */
-t_node			*last(t_list *temp);
+t_t_node			*last(t_list *temp);
 
 /*!
  *
  * @param data - for new_node
  * @return new_node for list
  */
-t_node			*new_node(const char *data);
+t_t_node			*new_node(const char *data);
 
-void			push_before(t_list *list, const char *elem, t_node *new_node);
-void			push_after(t_list *list, const char *elem, t_node *new_node);
-void			push_front(t_list *list, t_node *new_node);
-void			push_back(t_list *list, t_node *new_node);
+void			push_before(t_list *list, const char *elem, t_t_node *new_node);
+void			push_after(t_list *list, const char *elem, t_t_node *new_node);
+void			push_front(t_list *list, t_t_node *new_node);
+void			push_back(t_list *list, t_t_node *new_node);
 void			clear(t_list *&list);
 void            list_print(t_list *lst);
 

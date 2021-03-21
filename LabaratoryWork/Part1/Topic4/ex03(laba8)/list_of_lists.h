@@ -44,6 +44,6 @@ void			push_back_to_list(t_list_of_lists *listOfLists, int index, const std::str
 void			pop_back_list_of_lists(t_list_of_lists *listOfLists);
 void			pop_back_in_list(t_list_of_lists *listOfLists, int index);
 void			printList_of_list(t_list_of_lists *listOfLists);
-t_node			*getElem_lists(t_list_of_lists *listOfLists, const std::string &elem);
+t_t_node			*getElem_lists(t_list_of_lists *listOfLists, const std::string &elem);
 
 #endif //TEST_LIST_OF_LISTS_H

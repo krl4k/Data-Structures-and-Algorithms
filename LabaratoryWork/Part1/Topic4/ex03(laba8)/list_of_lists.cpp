@@ -149,10 +149,10 @@ void			pop_back_in_list(t_list_of_lists *listOfLists, int index)
 	pop_back(temp->head);
 }
 
-t_node *getElem_lists(t_list_of_lists *listOfLists, const std::string &elem)
+t_t_node *getElem_lists(t_list_of_lists *listOfLists, const std::string &elem)
 {
 	t_node_list_of_lists *temp = listOfLists->lists_head;
-	t_node *temp_node;
+	t_t_node *temp_node;
 	while (temp)
 	{
 		temp_node = temp->head->head->next;

@@ -104,7 +104,7 @@ int main(void)
 //	int index;
 	std::string elem;
 	int index;
-	t_node *node_elem = nullptr;
+	t_t_node *node_elem = nullptr;
 	std::string data;
 	while (true)
 	{

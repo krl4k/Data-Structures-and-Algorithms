@@ -3,7 +3,7 @@
 void init(t_list *&list)
 {
 	list = new t_list;
-	list->head = new t_node;
+	list->head = new t_t_node;
 	list->head->data = nullptr;
 	list->head->next = nullptr;
 	list->size = 0;
@@ -29,8 +29,8 @@ void			clear(t_list *&list)
 {
 	if (!(list) || !(list)->head)
 		return;
-	t_node *temp = (list)->head;
-	t_node *next = nullptr;
+	t_t_node *temp = (list)->head;
+	t_t_node *next = nullptr;
 	while (temp)
 	{
 		next = temp->next;
@@ -44,17 +44,17 @@ void			clear(t_list *&list)
 	list = nullptr;
 }
 
-t_node *new_node(const char *data)
+t_t_node *new_node(const char *data)
 {
-	t_node *newElem = new t_node;
+	t_t_node *newElem = new t_t_node;
 	newElem->data = strdup(data);
 	newElem->next = nullptr;
 	return (newElem);
 }
 
-t_node			*last(t_list *list)
+t_t_node			*last(t_list *list)
 {
-	t_node *temp = list->head->next;
+	t_t_node *temp = list->head->next;
 	if(!temp)
 		return (nullptr);
 	while (temp->next)
@@ -68,9 +68,9 @@ t_node			*last(t_list *list)
  * @param list
  * @param new_node , create node with new_node() func
  */
-void			push_front(t_list *list, t_node *new_node)
+void			push_front(t_list *list, t_t_node *new_node)
 {
-	t_node *new_head;
+	t_t_node *new_head;
 
 	if(new_node)
 	{
@@ -92,7 +92,7 @@ void			push_front(t_list *list, t_node *new_node)
  * @param list
  * @param new_node , create node with new_node() func
  */
-void push_back(t_list *list, t_node *new_node)
+void push_back(t_list *list, t_t_node *new_node)
 {
 	if(list && list->head && new_node)
 	{
@@ -106,9 +106,9 @@ void push_back(t_list *list, t_node *new_node)
 	}
 }
 
-t_node *find_before(t_list *list, const char *elem)
+t_t_node *find_before(t_list *list, const char *elem)
 {
-	t_node * temp = list->head;
+	t_t_node * temp = list->head;
 	while (temp->next)
 	{
 		if (strcmp(temp->next->data, elem) == 0)
@@ -118,9 +118,9 @@ t_node *find_before(t_list *list, const char *elem)
 	return (nullptr);
 }
 
-t_node *find_after(t_list *list, const char *elem)
+t_t_node *find_after(t_list *list, const char *elem)
 {
-	t_node * temp = list->head->next;
+	t_t_node * temp = list->head->next;
 	while (temp)
 	{
 		if (strcmp(temp->data, elem) == 0)
@@ -130,12 +130,12 @@ t_node *find_after(t_list *list, const char *elem)
 	return (nullptr);
 }
 
-void			push_before(t_list *list, const char *elem, t_node *new_node)
+void			push_before(t_list *list, const char *elem, t_t_node *new_node)
 {
 	if (list && list->head && new_node)
 	{
 		{
-			t_node *temp;
+			t_t_node *temp;
 			if (!(temp = find_before(list, elem)))
 			{
 				free(new_node->data);
@@ -149,7 +149,7 @@ void			push_before(t_list *list, const char *elem, t_node *new_node)
 	}
 }
 
-void			push_after(t_list *list, const char *elem, t_node *new_node)
+void			push_after(t_list *list, const char *elem, t_t_node *new_node)
 {
 	if (list && list->head && new_node)
 	{
@@ -157,7 +157,7 @@ void			push_after(t_list *list, const char *elem, t_node *new_node)
 			list->head->next = new_node;
 		else
 		{
-			t_node *temp;
+			t_t_node *temp;
 			if (!(temp = find_after(list, elem)))
 			{
 				free(new_node->data);
@@ -172,7 +172,7 @@ void			push_after(t_list *list, const char *elem, t_node *new_node)
 	}
 }
 
-t_node *getBeforeLast(t_node *temp)
+t_t_node *getBeforeLast(t_t_node *temp)
 {
 	if(!temp->next || !temp->next->next)
 		return nullptr;
@@ -187,12 +187,12 @@ void            pop_elem(t_list	*list, const char *elem)
 {
 	if (list && list->head)
 	{
-		t_node *temp;
+		t_t_node *temp;
 		if (!(temp = find_before(list, elem)))
 			return;
 		else
 		{
-			t_node *deleted = temp->next;
+			t_t_node *deleted = temp->next;
 			temp->next = deleted->next;
 			free(deleted->data);
 			deleted->data = nullptr;
@@ -207,7 +207,7 @@ void            pop_back(t_list *list)
 {
 	if (!list || !list->head || !list->head->next)
 		return;
-	t_node *temp = getBeforeLast(list->head);
+	t_t_node *temp = getBeforeLast(list->head);
 	if(temp == nullptr)
 	{
 		free(list->head->next->data);
@@ -227,7 +227,7 @@ void            pop_front(t_list *list)
 {
 	if (!list || !list->head || !list->head->next)
 		return;
-	t_node *tmp = list->head->next;
+	t_t_node *tmp = list->head->next;
 	list->head->next = list->head->next->next;
 	free(tmp->data);
 	tmp->data = nullptr;
@@ -241,7 +241,7 @@ void            list_print(t_list *list)
 		return;
 
 	std::cout << "List size = " << list->size << "\n";
-	t_node *temp_node = list->head->next;
+	t_t_node *temp_node = list->head->next;
 	while (temp_node)
 	{
 		std::cout << temp_node->data << "  ";
@@ -254,7 +254,7 @@ int				get_index(t_list *list, const char *elem)
 {
 	if (!list || !list->head || !list->head->next)
 		return -1;
-	t_node *temp = list->head->next;
+	t_t_node *temp = list->head->next;
 	int i = 0;
 	while (temp)
 	{
@@ -271,8 +271,8 @@ void			pop_back_to_stack(t_list *list, t_list *stack)
 {
 	if (!list || !stack || !list->head || !stack->head)
 		return;
-	t_node *moving_elem = list->head->next;
-	t_node *before_moving = list->head;
+	t_t_node *moving_elem = list->head->next;
+	t_t_node *before_moving = list->head;
 	if (!moving_elem)
 		return;
 	while (moving_elem->next)
@@ -286,7 +286,7 @@ void			pop_back_to_stack(t_list *list, t_list *stack)
 		stack->head->next = moving_elem;
 	else
 	{
-		t_node *temp = stack->head->next;
+		t_t_node *temp = stack->head->next;
 		stack->head->next = moving_elem;
 		moving_elem->next = temp;
 	}
@@ -298,8 +298,8 @@ void			pop_front_to_stack(t_list *list, t_list *stack)
 {
 	if (!list || !stack || !list->head || !stack->head)
 		return;
-	t_node *moving_elem = list->head->next;
-	t_node *after_moving = moving_elem->next;
+	t_t_node *moving_elem = list->head->next;
+	t_t_node *after_moving = moving_elem->next;
 	moving_elem->next = nullptr;
 	if (!moving_elem)
 		return;
@@ -308,7 +308,7 @@ void			pop_front_to_stack(t_list *list, t_list *stack)
 		stack->head->next = moving_elem;
 	else
 	{
-		t_node *temp = stack->head->next;
+		t_t_node *temp = stack->head->next;
 		stack->head->next = moving_elem;
 		moving_elem->next = temp;
 	}
@@ -322,8 +322,8 @@ void			pop_elem_to_stack(t_list *list, t_list *stack, const char *data)
 {
 	if (!list || !stack || !list->head || !stack->head)
 		return;
-	t_node *moving_elem = list->head->next;
-	t_node *before_moving = list->head;
+	t_t_node *moving_elem = list->head->next;
+	t_t_node *before_moving = list->head;
 	if (!moving_elem)
 		return;
 	while (moving_elem->next)
@@ -339,7 +339,7 @@ void			pop_elem_to_stack(t_list *list, t_list *stack, const char *data)
 		stack->head->next = moving_elem;
 	else
 	{
-		t_node *temp = stack->head->next;
+		t_t_node *temp = stack->head->next;
 		stack->head->next = moving_elem;
 		moving_elem->next = temp;
 	}

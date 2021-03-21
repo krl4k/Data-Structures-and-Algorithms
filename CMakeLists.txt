@@ -64,16 +64,16 @@ set(CMAKE_C_STANDARD 99)
 ##        LabaratoryWork/Part1/Topic4/ex01(laba7)/
 #        )
 
-
-include_directories(LabaratoryWork/Part1/Topic4/ex03\(laba8\)/)
-link_directories(LabaratoryWork/Part1/Topic4/ex03\(laba8\)/)
-
-add_executable(laba8
-        LabaratoryWork/Part1/Topic4/ex03\(laba8\)/dynamic_list.cpp
-        LabaratoryWork/Part1/Topic4/ex03\(laba8\)/list_of_lists.cpp
-        LabaratoryWork/Part1/Topic4/ex03\(laba8\)/main.cpp
-        #        LabaratoryWork/Part1/Topic4/ex01(laba7)/
-        )
+#
+#include_directories(LabaratoryWork/Part1/Topic4/ex03\(laba8\)/)
+#link_directories(LabaratoryWork/Part1/Topic4/ex03\(laba8\)/)
+#
+#add_executable(laba8
+#        LabaratoryWork/Part1/Topic4/ex03\(laba8\)/dynamic_list.cpp
+#        LabaratoryWork/Part1/Topic4/ex03\(laba8\)/list_of_lists.cpp
+#        LabaratoryWork/Part1/Topic4/ex03\(laba8\)/main.cpp
+#        #        LabaratoryWork/Part1/Topic4/ex01(laba7)/
+#        )
 
 
 
@@ -86,3 +86,15 @@ add_executable(laba8
 #        LabaratoryWork/Part1/Topic5/ex01\(laba9\)/main.cpp
 #        #        LabaratoryWork/Part1/Topic4/ex01(laba7)/
 #        )
+
+
+
+include_directories(LabaratoryWork/Part1/Topic5/ex01\(laba9\)/)
+link_directories(LabaratoryWork/Part1/Topic5/ex01\(laba9\)/)
+
+add_executable(laba9
+
+        LabaratoryWork/Part1/Topic5/ex01\(laba9\)/B_tree.cpp
+        LabaratoryWork/Part1/Topic5/ex01\(laba9\)/main.cpp
+        LabaratoryWork/Part1/Topic5/ex01\(laba9\)/dynamic_stack.cpp
+        )
