@@ -113,10 +113,12 @@ void clear(t_dbllist *&list) {
 		return;
 	t_node *tmp = list->head;
 	t_node *next = nullptr;
-	while (tmp) {
+	int i = 0;
+	while (tmp && i < list->size) {
 		next = tmp->next;
 		delete tmp;
 		tmp = next;
+		i++;
 	}
 	delete list;
 	list = nullptr;
