@@ -7,20 +7,18 @@ void init(t_dbllist *&list) {
 	list->size = 0;
 }
 
-int front(t_dbllist *list) {
-	if(list) {
-		if(list->tail)
+std::string front(t_dbllist *list) {
+//	if(list) {
+//		if(list->tail)
 			return (list->head->data);
-	}
-	return (0);
+//	}
 }
 
-int back(t_dbllist *list) {
-	if(list) {
-		if(list->tail)
+std::string back(t_dbllist *list) {
+//	if(list) {
+//		if(list->tail)
 			return (list->tail->data);
-	}
-	return (0);
+//	}
 }
 
 template<typename T>
@@ -39,7 +37,7 @@ int size(t_dbllist *list) {
 	return 0;
 }
 
-void push_back(t_dbllist *list, int data) {
+void push_back(t_dbllist *list, const std::string & data) {
 	if(!list)
 		return;
 	t_node *newElem = createElem(data);
@@ -53,60 +51,13 @@ void push_back(t_dbllist *list, int data) {
 		newElem->prev = (list)->tail;
 		(list)->tail->next = newElem;
 		(list)->tail = newElem;
+		list->tail->next = list->head;
+		list->head->prev = list->tail;
 	}
 	list->size++;
 }
 
-t_node *find_before(t_list *list, int elem)
-{
-	t_node * temp = list->head;
-	while (temp->next)
-	{
-		if (temp->next->data == elem)
-			return temp;
-		temp=temp->next;
-	}
-	return (nullptr);
-}
-
-t_node *find_after(t_list *list, int elem)
-{
-	t_node * temp = list->head->next;
-	while (temp)
-	{
-		if (temp->next->data == elem)
-			return temp;
-		temp = temp->next;
-	}
-	return (nullptr);
-}
-
-//after!!!!
-void	push_before(t_dbllist *list, int elem, t_node *new_node)
-{
-	if (list && list->head && new_node)
-	{
-		if (list->head->next == nullptr)
-		{
-			list->head = new_node;
-			list->tail = list->head;
-		}
-		else
-		{
-			t_node *temp;
-			if (!(temp = find_after(list, elem)))
-			{
-				delete new_node;
-				return;
-			}
-			new_node->next = temp->next;
-			temp->next = new_node;
-		}
-		list->size++;
-	}
-}
-
-void push_front(t_dbllist *list, int data) {
+void push_front(t_dbllist *list, const std::string & data) {
 	if(!list)
 		return;
 	t_node *newElem = createElem(data);
@@ -119,6 +70,8 @@ void push_front(t_dbllist *list, int data) {
 		newElem->next = list->head;
 		list->head->prev = newElem;
 		list->head = newElem;
+		list->head->prev = list->tail;
+//		newElem->prev = list->tail;
 	}
 	(list)->size++;
 }
@@ -169,7 +122,7 @@ void clear(t_dbllist *&list) {
 	list = nullptr;
 }
 
-int getIndex(t_dbllist *list, int data) {
+int getIndex(t_dbllist *list, const std::string & data) {
 	int index = 0;
 	t_node *tmp = list->head;
 	while (tmp) {
@@ -179,6 +132,30 @@ int getIndex(t_dbllist *list, int data) {
 		index++;
 	}
 	return (-1);
+}
+
+void printList(t_dbllist *list) {
+	if (!list)
+		return;
+	std::cout << "list(straight) = ";
+	t_node *head = list->head;
+	while (head) {
+		std::cout << head->data << ' ';
+		head = head->next;
+	}
+	std::cout << '\n';
+}
+
+void printReverseList(t_dbllist *list) {
+	if (!list)
+		return;
+	std::cout << "list(reverse)  = ";
+	t_node *head = list->tail;
+	while (head) {
+		std::cout << head->data << ' ';
+		head = head->prev;
+	}
+	std::cout << '\n';
 }
 
 t_node *getElem(t_dbllist *list, int index) {
@@ -208,31 +185,7 @@ t_node *getElem(t_dbllist *list, int index) {
 	return nullptr;
 }
 
-void printList(t_dbllist *list) {
-	if (!list)
-		return;
-	std::cout << "list(straight) = ";
-	t_node *head = list->head;
-	while (head) {
-		std::cout << head->data << ' ';
-		head = head->next;
-	}
-	std::cout << '\n';
-}
-
-void printReverseList(t_dbllist *list) {
-	if (!list)
-		return;
-	std::cout << "list(reverse)  = ";
-	t_node *head = list->tail;
-	while (head) {
-		std::cout << head->data << ' ';
-		head = head->prev;
-	}
-	std::cout << '\n';
-}
-
-void insert(t_dbllist *list, int index, int data) {
+void insert(t_dbllist *list, int index, const std::string & data) {
 	if(!list || index > size(list) || index < 0)
 		return;
 	if(index >= size(list)) {
@@ -267,24 +220,111 @@ void deleteAt(t_dbllist *list, int index)
 	}
 }
 
+void push_after(t_dbllist *list, const std::string &elem, const std::string &data) {
+	t_node *temp = list->head;
+	int i = 0;
+	if (list->size == 0)
+	{
+		push_back(list, data);
+		return;
+	}
+	while (temp && i < list->size)
+	{
+		if (elem == temp->data)
+		{
+			if (i + 1 <  list->size)
+				insert(list, i + 1, data);
+			else
+				push_back(list, data);
+			return;
+		}
+		temp = temp->next;
+		i++;
+	}
+}
 
-int main()
+void push_before(t_dbllist *list, const std::string &elem, const std::string &data) {
+	t_node *temp = list->head;
+	int i = 0;
+	if (list->size == 0)
+	{
+		push_back(list, data);
+		return;
+	}
+	while (temp && i < list->size)
+	{
+		if (elem == temp->data)
+		{
+			if (i - 1 > 0)
+				insert(list, i, data);
+			else
+				push_front(list, data);
+			return;
+		}
+		temp = temp->next;
+		i++;
+	}
+}
+
+void	deleteElem(t_dbllist *list, const std::string &elem)
 {
-	t_dbllist *list;
-	init(list);
-
-	for (int i = 0; i < 10; ++i)
-		push_back(list, i);
-
-
-	printList(list);
-
-	insert(list, 1, 100);
-	pop_back(list);
-	pop_front(list);
-
-	printList(list);
-	return (0);
+	t_node *temp = list->head;
+	int i = 0;
+	while (temp)
+	{
+		if (temp->data == elem)
+		{
+			deleteAt(list, i);
+			return;
+		}
+		temp = temp->next;
+		i++;
+	}
 }
 
 
+t_node *iterator_list(t_node *node)
+{
+	if (node)
+		return (node->next);
+	return nullptr;
+}
+t_node *reverse_iterator_list(t_node *node)
+{
+	if (node)
+		return (node->prev);
+	return nullptr;
+}
+
+
+void printList(t_node *head, t_node *(iter)(t_node*), int size)
+{
+	if (!head)
+		return;
+	int i = 0;
+	while (head && i < size) {
+		std::cout << head->data << ' ';
+		head = iter(head);
+		i++;
+	}
+	std::cout << '\n';
+}
+
+
+t_node	*getElem(t_dbllist *list, t_node *node, const std::string &elem, t_node*(iter)(t_node *))
+{
+	if (!list || !node)
+		return nullptr;
+	int i = 0;
+	while (node && i < list->size) {
+		if (node->data == elem)
+		{
+			std::cout << "Iter count = " << i << std::endl;
+			return (node);
+		}
+		node = iter(node);
+		i++;
+	}
+	return nullptr;
+//	std::cout << '\n';
+}

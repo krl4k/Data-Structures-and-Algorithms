@@ -3,17 +3,17 @@ cmake_minimum_required(VERSION 3.17)
 project(test)
 set(CMAKE_C_STANDARD 99)
 
-include_directories(
-        ./LabaratoryWork/Part1/Topic2/ex02
-        ./LabaratoryWork/Part1/Topic2/ex06
-        ./LabaratoryWork/Part1/Topic2/ex07(laba3)
-
-                    )
-link_directories(
-        ./LabaratoryWork/Part1/Topic2/ex02
-        ./LabaratoryWork/Part1/Topic2/ex06
-        ./LabaratoryWork/Part1/Topic2/ex07(laba3)
-        )
+#include_directories(
+#        ./LabaratoryWork/Part1/Topic2/ex02
+#        ./LabaratoryWork/Part1/Topic2/ex06
+#        ./LabaratoryWork/Part1/Topic2/ex07(laba3)
+#
+#                    )
+#link_directories(
+#        ./LabaratoryWork/Part1/Topic2/ex02
+#        ./LabaratoryWork/Part1/Topic2/ex06
+#        ./LabaratoryWork/Part1/Topic2/ex07(laba3)
+#        )
 
 #file(GLOB SOURCE_LABA1 "LabaratoryWork/Part1/Topic2/ex03/*cpp") #ПРОХОДИТ ПО ПАПКЕ СОБИРАЯ ВСЕ ФАИЛЫ
 #set(GLOB SOURCE_LABA1 LabaratoryWork/Part1/Topic2/ex02/ex02.cpp LabaratoryWork/Part1/Topic2/ex04(laba1)/ex04.cpp)
@@ -56,7 +56,31 @@ link_directories(
 
 
 
+
+#
+#add_executable(laba7
+#        LabaratoryWork/Part1/Topic4/ex01\(laba7\)/bi_list.cpp
+#        LabaratoryWork/Part1/Topic4/ex01\(laba7\)/main.cpp
+##        LabaratoryWork/Part1/Topic4/ex01(laba7)/
+#        )
+
+
+#include_directories(LabaratoryWork/Part1/Topic4/ex03\(laba8\)/)
+#link_directories(LabaratoryWork/Part1/Topic4/ex03\(laba8\)/)
+#
+#add_executable(laba7
+#        LabaratoryWork/Part1/Topic4/ex03\(laba8\)/dynamic_list.cpp
+#        LabaratoryWork/Part1/Topic4/ex03\(laba8\)/list_of_lists.cpp
+#        LabaratoryWork/Part1/Topic4/ex03\(laba8\)/main.cpp
+#        #        LabaratoryWork/Part1/Topic4/ex01(laba7)/
+#        )
+
+
+include_directories(LabaratoryWork/Part1/Topic4/ex03\(laba8\)/)
+link_directories(LabaratoryWork/Part1/Topic4/ex03\(laba8\)/)
+
 add_executable(laba7
-        LabaratoryWork/Part1/Topic4/ex01\(laba7\)/bi_list.cpp
-#        LabaratoryWork/Part1/Topic4/ex01(laba7)/
+        LabaratoryWork/Part1/Topic5/ex01\(laba9\)/B_tree.cpp
+        LabaratoryWork/Part1/Topic5/ex01\(laba9\)/main.cpp
+        #        LabaratoryWork/Part1/Topic4/ex01(laba7)/
         )

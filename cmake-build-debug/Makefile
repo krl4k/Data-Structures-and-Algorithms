@@ -59,19 +59,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/139/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/139/bin/cmake/linux/bin/cmake -E rm -f
+RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kirill/Документы/4семестр/algorithms_and_data_structures/labs
+CMAKE_SOURCE_DIR = /Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kirill/Документы/4семестр/algorithms_and_data_structures/labs/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,7 +79,7 @@ CMAKE_BINARY_DIR = /home/kirill/Документы/4семестр/algorithms_an
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/snap/clion/139/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -90,7 +90,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/snap/clion/139/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -100,9 +100,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kirill/Документы/4семестр/algorithms_and_data_structures/labs/cmake-build-debug/CMakeFiles /home/kirill/Документы/4семестр/algorithms_and_data_structures/labs/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms/cmake-build-debug/CMakeFiles /Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kirill/Документы/4семестр/algorithms_and_data_structures/labs/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/fgrisell/CLionProjects/Data-Structures-and-Algorithms/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -143,32 +143,59 @@ laba7/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/laba7.dir/build.make CMakeFiles/laba7.dir/build
 .PHONY : laba7/fast
 
-LabaratoryWork/Part1/Topic4/ex01(laba7)/bi_list.o: LabaratoryWork/Part1/Topic4/ex01(laba7)/bi_list.cpp.o
+LabaratoryWork/Part1/Topic5/ex01(laba9)/B_tree.o: LabaratoryWork/Part1/Topic5/ex01(laba9)/B_tree.cpp.o
 
-.PHONY : LabaratoryWork/Part1/Topic4/ex01(laba7)/bi_list.o
+.PHONY : LabaratoryWork/Part1/Topic5/ex01(laba9)/B_tree.o
 
 # target to build an object file
-LabaratoryWork/Part1/Topic4/ex01(laba7)/bi_list.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/laba7.dir/build.make "CMakeFiles/laba7.dir/LabaratoryWork/Part1/Topic4/ex01(laba7)/bi_list.cpp.o"
-.PHONY : LabaratoryWork/Part1/Topic4/ex01(laba7)/bi_list.cpp.o
+LabaratoryWork/Part1/Topic5/ex01(laba9)/B_tree.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laba7.dir/build.make "CMakeFiles/laba7.dir/LabaratoryWork/Part1/Topic5/ex01(laba9)/B_tree.cpp.o"
+.PHONY : LabaratoryWork/Part1/Topic5/ex01(laba9)/B_tree.cpp.o
 
-LabaratoryWork/Part1/Topic4/ex01(laba7)/bi_list.i: LabaratoryWork/Part1/Topic4/ex01(laba7)/bi_list.cpp.i
+LabaratoryWork/Part1/Topic5/ex01(laba9)/B_tree.i: LabaratoryWork/Part1/Topic5/ex01(laba9)/B_tree.cpp.i
 
-.PHONY : LabaratoryWork/Part1/Topic4/ex01(laba7)/bi_list.i
+.PHONY : LabaratoryWork/Part1/Topic5/ex01(laba9)/B_tree.i
 
 # target to preprocess a source file
-LabaratoryWork/Part1/Topic4/ex01(laba7)/bi_list.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/laba7.dir/build.make "CMakeFiles/laba7.dir/LabaratoryWork/Part1/Topic4/ex01(laba7)/bi_list.cpp.i"
-.PHONY : LabaratoryWork/Part1/Topic4/ex01(laba7)/bi_list.cpp.i
+LabaratoryWork/Part1/Topic5/ex01(laba9)/B_tree.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laba7.dir/build.make "CMakeFiles/laba7.dir/LabaratoryWork/Part1/Topic5/ex01(laba9)/B_tree.cpp.i"
+.PHONY : LabaratoryWork/Part1/Topic5/ex01(laba9)/B_tree.cpp.i
 
-LabaratoryWork/Part1/Topic4/ex01(laba7)/bi_list.s: LabaratoryWork/Part1/Topic4/ex01(laba7)/bi_list.cpp.s
+LabaratoryWork/Part1/Topic5/ex01(laba9)/B_tree.s: LabaratoryWork/Part1/Topic5/ex01(laba9)/B_tree.cpp.s
 
-.PHONY : LabaratoryWork/Part1/Topic4/ex01(laba7)/bi_list.s
+.PHONY : LabaratoryWork/Part1/Topic5/ex01(laba9)/B_tree.s
 
 # target to generate assembly for a file
-LabaratoryWork/Part1/Topic4/ex01(laba7)/bi_list.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/laba7.dir/build.make "CMakeFiles/laba7.dir/LabaratoryWork/Part1/Topic4/ex01(laba7)/bi_list.cpp.s"
-.PHONY : LabaratoryWork/Part1/Topic4/ex01(laba7)/bi_list.cpp.s
+LabaratoryWork/Part1/Topic5/ex01(laba9)/B_tree.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laba7.dir/build.make "CMakeFiles/laba7.dir/LabaratoryWork/Part1/Topic5/ex01(laba9)/B_tree.cpp.s"
+.PHONY : LabaratoryWork/Part1/Topic5/ex01(laba9)/B_tree.cpp.s
+
+LabaratoryWork/Part1/Topic5/ex01(laba9)/main.o: LabaratoryWork/Part1/Topic5/ex01(laba9)/main.cpp.o
+
+.PHONY : LabaratoryWork/Part1/Topic5/ex01(laba9)/main.o
+
+# target to build an object file
+LabaratoryWork/Part1/Topic5/ex01(laba9)/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laba7.dir/build.make "CMakeFiles/laba7.dir/LabaratoryWork/Part1/Topic5/ex01(laba9)/main.cpp.o"
+.PHONY : LabaratoryWork/Part1/Topic5/ex01(laba9)/main.cpp.o
+
+LabaratoryWork/Part1/Topic5/ex01(laba9)/main.i: LabaratoryWork/Part1/Topic5/ex01(laba9)/main.cpp.i
+
+.PHONY : LabaratoryWork/Part1/Topic5/ex01(laba9)/main.i
+
+# target to preprocess a source file
+LabaratoryWork/Part1/Topic5/ex01(laba9)/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laba7.dir/build.make "CMakeFiles/laba7.dir/LabaratoryWork/Part1/Topic5/ex01(laba9)/main.cpp.i"
+.PHONY : LabaratoryWork/Part1/Topic5/ex01(laba9)/main.cpp.i
+
+LabaratoryWork/Part1/Topic5/ex01(laba9)/main.s: LabaratoryWork/Part1/Topic5/ex01(laba9)/main.cpp.s
+
+.PHONY : LabaratoryWork/Part1/Topic5/ex01(laba9)/main.s
+
+# target to generate assembly for a file
+LabaratoryWork/Part1/Topic5/ex01(laba9)/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laba7.dir/build.make "CMakeFiles/laba7.dir/LabaratoryWork/Part1/Topic5/ex01(laba9)/main.cpp.s"
+.PHONY : LabaratoryWork/Part1/Topic5/ex01(laba9)/main.cpp.s
 
 # Help Target
 help:
@@ -179,9 +206,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... laba7"
-	@echo "... LabaratoryWork/Part1/Topic4/ex01(laba7)/bi_list.o"
-	@echo "... LabaratoryWork/Part1/Topic4/ex01(laba7)/bi_list.i"
-	@echo "... LabaratoryWork/Part1/Topic4/ex01(laba7)/bi_list.s"
+	@echo "... LabaratoryWork/Part1/Topic5/ex01(laba9)/B_tree.o"
+	@echo "... LabaratoryWork/Part1/Topic5/ex01(laba9)/B_tree.i"
+	@echo "... LabaratoryWork/Part1/Topic5/ex01(laba9)/B_tree.s"
+	@echo "... LabaratoryWork/Part1/Topic5/ex01(laba9)/main.o"
+	@echo "... LabaratoryWork/Part1/Topic5/ex01(laba9)/main.i"
+	@echo "... LabaratoryWork/Part1/Topic5/ex01(laba9)/main.s"
 .PHONY : help
 
 
